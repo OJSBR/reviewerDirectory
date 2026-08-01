@@ -1,10 +1,10 @@
 # Reviewer Directory — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.0.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.0.2-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/1.0.0.1/reviewerDirectory-1.0.0.1.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/1.0.0.2/reviewerDirectory-1.0.0.2.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that adds an **internal, editor-only
 directory of reviewers** — pulling the accounts that already hold the *Reviewer* role in the
@@ -18,12 +18,16 @@ a period or issue, ready to publish as an acknowledgement.
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.0.0 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.0.2 |
 
 ## What it does
 
 - **Reviewer directory** — a backend page, restricted to **Managers, Section Editors and
   Administrators**, listing every user with the *Reviewer* role in the current journal.
+- **One-click shortcut in the dashboard menu** — once enabled, the plugin appends a
+  **Reviewer Directory** entry to the end of the editorial sidebar menu, so editors reach the
+  page directly instead of going through the plugins screen. It is shown only to the roles the
+  page itself authorises (Managers, Section Editors and Administrators).
 - **Profile + review data per reviewer** — name, affiliation, country, review interests, ORCID
   (with a verified badge), plus statistics: reviews completed, in progress, declined, average
   days to complete, quality rating, last assignment date and **last completion date**.
@@ -97,6 +101,10 @@ por período ou edição, pronta para publicar como agradecimento.
 
 - **Diretório de avaliadores** — uma página de backend, restrita a **Gerentes, Editores de
   seção e Administradores**, listando todos os usuários com papel de *Avaliador* na revista.
+- **Atalho de um clique no menu do painel** — quando ativado, o plugin acrescenta um item
+  **Diretório de Avaliadores** ao fim do menu lateral do painel editorial, para o editor abrir
+  a página direto, sem passar pela tela de plugins. Aparece apenas para os papéis que a própria
+  página autoriza (Gerentes, Editores de seção e Administradores).
 - **Perfil + dados de avaliação por avaliador** — nome, afiliação, país, interesses de
   avaliação, ORCID (com selo de autenticação) e estatísticas: avaliações concluídas, em
   andamento, recusadas, média de dias para concluir, nota de qualidade, data da última

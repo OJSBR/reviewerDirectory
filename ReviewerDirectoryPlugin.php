@@ -16,11 +16,14 @@
 namespace APP\plugins\generic\reviewerDirectory;
 
 use APP\core\Application;
+use APP\facades\Repo;
+use APP\template\TemplateManager;
 use PKP\core\Registry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RedirectAction;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
+use PKP\security\Role;
 
 class ReviewerDirectoryPlugin extends GenericPlugin
 {
@@ -54,6 +57,8 @@ class ReviewerDirectoryPlugin extends GenericPlugin
             if ($this->getEnabled($mainContextId)) {
                 // Registra a rota da página do diretório.
                 Hook::add('LoadHandler', $this->callbackLoadHandler(...));
+                // Acrescenta um atalho ao fim do menu lateral do painel (backend).
+                Hook::add('TemplateManager::setupBackendPage', $this->callbackSetupBackendPage(...));
             }
             return true;
         }
@@ -78,6 +83,75 @@ class ReviewerDirectoryPlugin extends GenericPlugin
         $handler = &$args[3];
         $handler = new ReviewerDirectoryHandler($this);
         return true;
+    }
+
+    /**
+     * Acrescenta um atalho para o diretório ao FIM do menu lateral do painel
+     * (backend), poupando o editor de abri-lo pela tela de plugins. Visível
+     * apenas para gerentes, editores de seção e administradores — os mesmos
+     * papéis que o handler da página autoriza.
+     *
+     * @param string $hookName
+     * @param array $args [$templateMgr]
+     *
+     * @return bool
+     */
+    public function callbackSetupBackendPage($hookName, $args)
+    {
+        $request = Application::get()->getRequest();
+        $context = $request->getContext();
+        $user = $request->getUser();
+
+        // Sem contexto ou sem usuário não existe menu lateral para acrescentar.
+        if (!$context || !$user) {
+            return Hook::CONTINUE;
+        }
+
+        // O hook dispara sem argumentos: o template manager vem do request.
+        $templateMgr = TemplateManager::getManager($request);
+        $menu = $templateMgr->getState('menu');
+        if (!is_array($menu) || !count($menu)) {
+            return Hook::CONTINUE;
+        }
+
+        if (!$this->userCanAccess($user->getId(), $context->getId())) {
+            return Hook::CONTINUE;
+        }
+
+        $menu['reviewerDirectory'] = [
+            'name' => __('plugins.generic.reviewerDirectory.displayName'),
+            'icon' => 'ReviewAssignments',
+            'url' => $this->getDirectoryUrl($request),
+            'isCurrent' => $request->getRequestedPage() === self::PAGE,
+        ];
+        $templateMgr->setState(['menu' => $menu]);
+
+        return Hook::CONTINUE;
+    }
+
+    /**
+     * O atalho só aparece para quem a página autoriza: gerentes, editores de
+     * seção e administradores do site.
+     */
+    private function userCanAccess(int $userId, int $contextId): bool
+    {
+        $allowedRoles = [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_SITE_ADMIN];
+
+        // Papéis na revista atual.
+        foreach (Repo::userGroup()->userUserGroups($userId, $contextId) as $userGroup) {
+            if (in_array($userGroup->roleId, $allowedRoles)) {
+                return true;
+            }
+        }
+
+        // Administrador do site é atribuído fora do contexto da revista.
+        foreach (Repo::userGroup()->userUserGroups($userId) as $userGroup) {
+            if ($userGroup->roleId == Role::ROLE_ID_SITE_ADMIN) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
