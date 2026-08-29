@@ -1,122 +1,157 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: hu\n"
 
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.displayName"
-msgstr "Reviewer Directory"
+msgstr "Bírálói névjegyzék"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.description"
-msgstr "Adds an internal page, restricted to managers and editors, to browse and filter every reviewer registered in the journal, with their profiles and review statistics."
+msgstr "Belső oldalt ad hozzá, amely csak menedzserek és szerkesztők számára érhető el, a folyóiratban regisztrált összes bíráló böngészésére és szűrésére, profiljukkal és bírálati statisztikáikkal."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.openDirectory"
-msgstr "Open directory"
+msgstr "Névjegyzék megnyitása"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
-msgstr "Search by name, affiliation, country, interest, email..."
+msgstr "Keresés név, munkahely, ország, érdeklődés, e-mail alapján…"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Only with ORCID"
+msgstr "Csak ORCID-dal"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Showing"
+msgstr "Megjelenítve"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.of"
-msgstr "of"
+msgstr "/"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "No reviewers registered in this journal."
+msgstr "Ebben a folyóiratban nincs regisztrált bíráló."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Reviews completed"
+msgstr "Befejezett bírálatok"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Reviews in progress"
+msgstr "Folyamatban lévő bírálatok"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Reviews declined"
+msgstr "Elutasított bírálatok"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Average days to complete"
+msgstr "Átlagos napok a befejezésig"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.rating"
-msgstr "Quality rating (1 to 5)"
+msgstr "Minőségi értékelés (1–5)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Compl."
+msgstr "Kész"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "Active"
+msgstr "Aktív"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Decl."
+msgstr "Eluts."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Avg (d)"
+msgstr "Átl. (nap)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Rating"
+msgstr "Értékelés"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
-msgstr "Last assignment"
+msgstr "Utolsó megbízás"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastCompleted"
-msgstr "Last completion"
+msgstr "Utolsó befejezés"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.orcidVerified"
-msgstr "Verified ORCID"
+msgstr "Ellenőrzött ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.columns"
-msgstr "Columns"
+msgstr "Oszlopok"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.export"
-msgstr "Export (Excel)"
+msgstr "Exportálás (Excel)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabDirectory"
-msgstr "Directory"
+msgstr "Névjegyzék"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabNominata"
-msgstr "Roster"
+msgstr "Lista"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataIntro"
-msgstr "Enter a period (review completion date) and/or an issue to list the reviewers who completed reviews within the selected scope. Useful for publishing the reviewer acknowledgement roster."
+msgstr "Adjon meg időszakot (a bírálat befejezésének dátuma) és/vagy lapszámot azoknak a bírálóknak a listázásához, akik a kiválasztott körben fejeztek be bírálatot. Hasznos a bírálói köszönetlista közléséhez."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateFrom"
-msgstr "Completed from"
+msgstr "Befejezve ettől"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateTo"
-msgstr "Completed to"
+msgstr "Befejezve eddig"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue"
-msgstr "Issue"
+msgstr "Lapszám"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.allIssues"
-msgstr "All issues"
+msgstr "Minden lapszám"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.generate"
-msgstr "Generate roster"
+msgstr "Lista létrehozása"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
-msgstr "No reviewer completed reviews within the selected scope."
+msgstr "A kiválasztott körben egyetlen bíráló sem fejezett be bírálatot."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} reviewer(s) completed {$reviews} review(s) within the selected scope."
+msgstr "{$n} bíráló {$reviews} bírálatot fejezett be a kiválasztott körben."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
-msgstr "Reviews completed in scope"
+msgstr "A kiválasztott körben befejezett bírálatok"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.submissions"
-msgstr "Submissions"
+msgstr "Beküldések"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.firstDate"
-msgstr "First"
+msgstr "Első"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastDate"
-msgstr "Last"
+msgstr "Utolsó"

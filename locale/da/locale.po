@@ -1,122 +1,157 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: da\n"
 
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.displayName"
-msgstr "Reviewer Directory"
+msgstr "Bedømmerfortegnelse"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.description"
-msgstr "Adds an internal page, restricted to managers and editors, to browse and filter every reviewer registered in the journal, with their profiles and review statistics."
+msgstr "Tilføjer en intern side, forbeholdt ledere og redaktører, hvor man kan gennemse og filtrere alle bedømmere, der er registreret i tidsskriftet, med deres profiler og bedømmelsesstatistik."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.openDirectory"
-msgstr "Open directory"
+msgstr "Åbn fortegnelsen"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
-msgstr "Search by name, affiliation, country, interest, email..."
+msgstr "Søg efter navn, tilhørsforhold, land, interesse, e-mail …"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Only with ORCID"
+msgstr "Kun med ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Showing"
+msgstr "Viser"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.of"
-msgstr "of"
+msgstr "af"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "No reviewers registered in this journal."
+msgstr "Der er ingen bedømmere registreret i dette tidsskrift."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Reviews completed"
+msgstr "Afsluttede bedømmelser"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Reviews in progress"
+msgstr "Igangværende bedømmelser"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Reviews declined"
+msgstr "Afviste bedømmelser"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Average days to complete"
+msgstr "Gennemsnitligt antal dage til afslutning"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.rating"
-msgstr "Quality rating (1 to 5)"
+msgstr "Kvalitetsvurdering (1 til 5)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Compl."
+msgstr "Afsl."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "Active"
+msgstr "Aktiv"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Decl."
+msgstr "Afvist"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Avg (d)"
+msgstr "Gns. (d)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Rating"
+msgstr "Vurdering"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
-msgstr "Last assignment"
+msgstr "Seneste tildeling"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastCompleted"
-msgstr "Last completion"
+msgstr "Seneste afslutning"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.orcidVerified"
-msgstr "Verified ORCID"
+msgstr "Verificeret ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.columns"
-msgstr "Columns"
+msgstr "Kolonner"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.export"
-msgstr "Export (Excel)"
+msgstr "Eksportér (Excel)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabDirectory"
-msgstr "Directory"
+msgstr "Fortegnelse"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabNominata"
-msgstr "Roster"
+msgstr "Liste"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataIntro"
-msgstr "Enter a period (review completion date) and/or an issue to list the reviewers who completed reviews within the selected scope. Useful for publishing the reviewer acknowledgement roster."
+msgstr "Angiv en periode (dato for afsluttet bedømmelse) og/eller et nummer for at liste de bedømmere, der har afsluttet bedømmelser inden for det valgte omfang. Nyttigt til at offentliggøre listen med tak til bedømmerne."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateFrom"
-msgstr "Completed from"
+msgstr "Afsluttet fra"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateTo"
-msgstr "Completed to"
+msgstr "Afsluttet til"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue"
-msgstr "Issue"
+msgstr "Nummer"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.allIssues"
-msgstr "All issues"
+msgstr "Alle numre"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.generate"
-msgstr "Generate roster"
+msgstr "Generér listen"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
-msgstr "No reviewer completed reviews within the selected scope."
+msgstr "Ingen bedømmer har afsluttet bedømmelser inden for det valgte omfang."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} reviewer(s) completed {$reviews} review(s) within the selected scope."
+msgstr "{$n} bedømmer(e) har afsluttet {$reviews} bedømmelse(r) inden for det valgte omfang."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
-msgstr "Reviews completed in scope"
+msgstr "Bedømmelser afsluttet i det valgte omfang"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.submissions"
-msgstr "Submissions"
+msgstr "Indsendelser"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.firstDate"
-msgstr "First"
+msgstr "Første"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastDate"
-msgstr "Last"
+msgstr "Sidste"

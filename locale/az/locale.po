@@ -1,122 +1,157 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: az\n"
 
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.displayName"
-msgstr "Reviewer Directory"
+msgstr "Rəyçilər kataloqu"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.description"
-msgstr "Adds an internal page, restricted to managers and editors, to browse and filter every reviewer registered in the journal, with their profiles and review statistics."
+msgstr "Menecerlər və redaktorlarla məhdudlaşan daxili səhifə əlavə edir; orada jurnalda qeydiyyatdan keçmiş bütün rəyçiləri profilləri və rəy statistikası ilə birlikdə nəzərdən keçirmək və süzgəcdən keçirmək olar."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.openDirectory"
-msgstr "Open directory"
+msgstr "Kataloqu aç"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
-msgstr "Search by name, affiliation, country, interest, email..."
+msgstr "Ad, təşkilat, ölkə, maraq, e-poçt üzrə axtar…"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Only with ORCID"
+msgstr "Yalnız ORCID ilə"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Showing"
+msgstr "Göstərilir"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.of"
-msgstr "of"
+msgstr "/"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "No reviewers registered in this journal."
+msgstr "Bu jurnalda qeydiyyatdan keçmiş rəyçi yoxdur."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Reviews completed"
+msgstr "Tamamlanmış rəylər"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Reviews in progress"
+msgstr "Davam edən rəylər"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Reviews declined"
+msgstr "İmtina edilmiş rəylər"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Average days to complete"
+msgstr "Tamamlamaya orta gün sayı"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.rating"
-msgstr "Quality rating (1 to 5)"
+msgstr "Keyfiyyət qiymətləndirməsi (1-dən 5-ə)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Compl."
+msgstr "Tamaml."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "Active"
+msgstr "Aktiv"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Decl."
+msgstr "İmtina"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Avg (d)"
+msgstr "Orta (gün)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Rating"
+msgstr "Qiymətləndirmə"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
-msgstr "Last assignment"
+msgstr "Son təyinat"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastCompleted"
-msgstr "Last completion"
+msgstr "Son tamamlanma"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.orcidVerified"
-msgstr "Verified ORCID"
+msgstr "Təsdiqlənmiş ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.columns"
-msgstr "Columns"
+msgstr "Sütunlar"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.export"
-msgstr "Export (Excel)"
+msgstr "İxrac (Excel)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabDirectory"
-msgstr "Directory"
+msgstr "Kataloq"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabNominata"
-msgstr "Roster"
+msgstr "Siyahı"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataIntro"
-msgstr "Enter a period (review completion date) and/or an issue to list the reviewers who completed reviews within the selected scope. Useful for publishing the reviewer acknowledgement roster."
+msgstr "Seçilmiş dövrdə rəy tamamlamış rəyçiləri siyahılamaq üçün dövr (rəyin tamamlanma tarixi) və/və ya nömrə seçin. Rəyçilərə təşəkkür siyahısını dərc etmək üçün əlverişlidir."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateFrom"
-msgstr "Completed from"
+msgstr "Tamamlanma tarixindən"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateTo"
-msgstr "Completed to"
+msgstr "Tamamlanma tarixinədək"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue"
-msgstr "Issue"
+msgstr "Nömrə"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.allIssues"
-msgstr "All issues"
+msgstr "Bütün nömrələr"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.generate"
-msgstr "Generate roster"
+msgstr "Siyahını yarat"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
-msgstr "No reviewer completed reviews within the selected scope."
+msgstr "Seçilmiş dövrdə heç bir rəyçi rəyi tamamlamayıb."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} reviewer(s) completed {$reviews} review(s) within the selected scope."
+msgstr "Seçilmiş dövrdə {$n} rəyçi {$reviews} rəyi tamamlayıb."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
-msgstr "Reviews completed in scope"
+msgstr "Seçilmiş dövrdə tamamlanmış rəylər"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.submissions"
-msgstr "Submissions"
+msgstr "Təqdimatlar"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.firstDate"
-msgstr "First"
+msgstr "İlk"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastDate"
-msgstr "Last"
+msgstr "Son"

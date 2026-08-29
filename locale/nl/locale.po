@@ -1,121 +1,120 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_FR\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: nl\n"
+
 
 msgid "plugins.generic.reviewerDirectory.displayName"
-msgstr "Répertoire des évaluateurs"
+msgstr "Beoordelaarsoverzicht"
 
 msgid "plugins.generic.reviewerDirectory.description"
-msgstr "Ajoute une page interne, réservée aux gestionnaires et aux rédacteurs, pour consulter et filtrer tous les évaluateurs enregistrés dans la revue, avec leurs profils et leurs statistiques d'évaluation."
+msgstr "Voegt een interne pagina toe, alleen voor beheerders en redacteuren, om alle in het tijdschrift geregistreerde beoordelaars te doorbladeren en te filteren, met hun profielen en beoordelingsstatistieken."
 
 msgid "plugins.generic.reviewerDirectory.openDirectory"
-msgstr "Ouvrir le répertoire"
+msgstr "Overzicht openen"
 
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
-msgstr "Rechercher par nom, affiliation, pays, centre d'intérêt, courriel..."
+msgstr "Zoeken op naam, affiliatie, land, interesse, e-mail…"
 
 msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Uniquement avec ORCID"
+msgstr "Alleen met ORCID"
 
 msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Affichage de"
+msgstr "Weergegeven"
 
 msgid "plugins.generic.reviewerDirectory.of"
-msgstr "sur"
+msgstr "van"
 
 msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "Aucun évaluateur enregistré dans cette revue."
+msgstr "Er zijn geen beoordelaars geregistreerd in dit tijdschrift."
 
 msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Évaluations terminées"
+msgstr "Voltooide beoordelingen"
 
 msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Évaluations en cours"
+msgstr "Lopende beoordelingen"
 
 msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Évaluations refusées"
+msgstr "Geweigerde beoordelingen"
 
 msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Nombre moyen de jours pour terminer"
+msgstr "Gemiddeld aantal dagen tot voltooiing"
 
 msgid "plugins.generic.reviewerDirectory.rating"
-msgstr "Note de qualité (1 à 5)"
+msgstr "Kwaliteitsbeoordeling (1 tot 5)"
 
 msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Term."
+msgstr "Voltooid"
 
 msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "En cours"
+msgstr "Actief"
 
 msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Ref."
+msgstr "Afgew."
 
 msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Moy. (j)"
+msgstr "Gem. (d)"
 
 msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Note"
+msgstr "Beoordeling"
 
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
-msgstr "Dernière assignation"
+msgstr "Laatste toewijzing"
 
 msgid "plugins.generic.reviewerDirectory.lastCompleted"
-msgstr "Dernier achèvement"
+msgstr "Laatste voltooiing"
 
 msgid "plugins.generic.reviewerDirectory.orcidVerified"
-msgstr "ORCID vérifié"
+msgstr "Geverifieerde ORCID"
 
 msgid "plugins.generic.reviewerDirectory.columns"
-msgstr "Colonnes"
+msgstr "Kolommen"
 
 msgid "plugins.generic.reviewerDirectory.export"
-msgstr "Exporter (Excel)"
+msgstr "Exporteren (Excel)"
 
 msgid "plugins.generic.reviewerDirectory.tabDirectory"
-msgstr "Répertoire"
+msgstr "Overzicht"
 
 msgid "plugins.generic.reviewerDirectory.tabNominata"
-msgstr "Liste de remerciements"
+msgstr "Lijst"
 
 msgid "plugins.generic.reviewerDirectory.nominataIntro"
-msgstr "Saisissez une période (date d'achèvement de l'évaluation) et/ou un numéro pour lister les évaluateurs ayant terminé des évaluations dans le périmètre sélectionné. Utile pour publier la liste de remerciements aux évaluateurs."
+msgstr "Voer een periode (datum waarop de beoordeling is voltooid) en/of een nummer in om de beoordelaars te tonen die binnen het gekozen bereik beoordelingen hebben voltooid. Handig om de dankbetuiging aan beoordelaars te publiceren."
 
 msgid "plugins.generic.reviewerDirectory.dateFrom"
-msgstr "Terminées à partir du"
+msgstr "Voltooid vanaf"
 
 msgid "plugins.generic.reviewerDirectory.dateTo"
-msgstr "Terminées jusqu'au"
+msgstr "Voltooid tot"
 
 msgid "plugins.generic.reviewerDirectory.issue"
-msgstr "Numéro"
+msgstr "Nummer"
 
 msgid "plugins.generic.reviewerDirectory.allIssues"
-msgstr "Tous les numéros"
+msgstr "Alle nummers"
 
 msgid "plugins.generic.reviewerDirectory.generate"
-msgstr "Générer la liste"
+msgstr "Lijst genereren"
 
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
-msgstr "Aucun évaluateur n'a terminé d'évaluation dans le périmètre sélectionné."
+msgstr "Geen enkele beoordelaar heeft beoordelingen voltooid binnen het geselecteerde bereik."
 
 msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} évaluateur(s) ont terminé {$reviews} évaluation(s) dans le périmètre sélectionné."
+msgstr "{$n} beoordelaar(s) hebben {$reviews} beoordeling(en) voltooid binnen het geselecteerde bereik."
 
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
-msgstr "Évaluations terminées dans le périmètre"
+msgstr "Beoordelingen voltooid binnen het bereik"
 
 msgid "plugins.generic.reviewerDirectory.submissions"
-msgstr "Soumissions"
+msgstr "Inzendingen"
 
 msgid "plugins.generic.reviewerDirectory.firstDate"
-msgstr "Première"
+msgstr "Eerste"
 
 msgid "plugins.generic.reviewerDirectory.lastDate"
-msgstr "Dernière"
+msgstr "Laatste"

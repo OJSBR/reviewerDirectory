@@ -1,122 +1,157 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: zh_Hans\n"
 
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.displayName"
-msgstr "Reviewer Directory"
+msgstr "审稿人名录"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.description"
-msgstr "Adds an internal page, restricted to managers and editors, to browse and filter every reviewer registered in the journal, with their profiles and review statistics."
+msgstr "新增一个仅限管理员和编辑访问的内部页面，用于浏览和筛选期刊中已注册的所有审稿人，并显示其资料与审稿统计。"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.openDirectory"
-msgstr "Open directory"
+msgstr "打开名录"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
-msgstr "Search by name, affiliation, country, interest, email..."
+msgstr "按姓名、单位、国家、研究兴趣、邮箱搜索…"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Only with ORCID"
+msgstr "仅限有 ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Showing"
+msgstr "显示"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.of"
-msgstr "of"
+msgstr "共"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "No reviewers registered in this journal."
+msgstr "本期刊尚无注册的审稿人。"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Reviews completed"
+msgstr "已完成审稿"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Reviews in progress"
+msgstr "进行中的审稿"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Reviews declined"
+msgstr "已拒绝的审稿"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Average days to complete"
+msgstr "平均完成天数"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.rating"
-msgstr "Quality rating (1 to 5)"
+msgstr "质量评分（1 到 5）"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Compl."
+msgstr "已完成"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "Active"
+msgstr "启用"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Decl."
+msgstr "已拒绝"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Avg (d)"
+msgstr "平均(天)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Rating"
+msgstr "评分"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
-msgstr "Last assignment"
+msgstr "最近指派"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastCompleted"
-msgstr "Last completion"
+msgstr "最近完成"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.orcidVerified"
-msgstr "Verified ORCID"
+msgstr "已验证 ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.columns"
-msgstr "Columns"
+msgstr "列"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.export"
-msgstr "Export (Excel)"
+msgstr "导出（Excel）"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabDirectory"
-msgstr "Directory"
+msgstr "名录"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabNominata"
-msgstr "Roster"
+msgstr "名单"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataIntro"
-msgstr "Enter a period (review completion date) and/or an issue to list the reviewers who completed reviews within the selected scope. Useful for publishing the reviewer acknowledgement roster."
+msgstr "输入时间范围（审稿完成日期）和/或期次，即可列出在所选范围内完成审稿的审稿人。适合用来发布审稿人致谢名单。"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateFrom"
-msgstr "Completed from"
+msgstr "完成起始日"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateTo"
-msgstr "Completed to"
+msgstr "完成截止日"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue"
-msgstr "Issue"
+msgstr "期次"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.allIssues"
-msgstr "All issues"
+msgstr "所有期次"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.generate"
-msgstr "Generate roster"
+msgstr "生成名单"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
-msgstr "No reviewer completed reviews within the selected scope."
+msgstr "所选范围内没有审稿人完成审稿。"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} reviewer(s) completed {$reviews} review(s) within the selected scope."
+msgstr "所选范围内，{$n} 位审稿人完成了 {$reviews} 份审稿。"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
-msgstr "Reviews completed in scope"
+msgstr "所选范围内完成的审稿"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.submissions"
-msgstr "Submissions"
+msgstr "投稿"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.firstDate"
-msgstr "First"
+msgstr "首页"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastDate"
-msgstr "Last"
+msgstr "末页"

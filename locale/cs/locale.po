@@ -1,122 +1,157 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: OJSBR\n"
-"Language-Team: OJSBR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: cs\n"
 
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.displayName"
-msgstr "Reviewer Directory"
+msgstr "Adresář recenzentů"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.description"
-msgstr "Adds an internal page, restricted to managers and editors, to browse and filter every reviewer registered in the journal, with their profiles and review statistics."
+msgstr "Přidává interní stránku, přístupnou jen manažerům a editorům, pro procházení a filtrování všech recenzentů registrovaných v časopise, s jejich profily a statistikami recenzí."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.openDirectory"
-msgstr "Open directory"
+msgstr "Otevřít adresář"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
-msgstr "Search by name, affiliation, country, interest, email..."
+msgstr "Hledat podle jména, pracoviště, země, zájmu, e-mailu…"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Only with ORCID"
+msgstr "Pouze s ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Showing"
+msgstr "Zobrazeno"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.of"
-msgstr "of"
+msgstr "z"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "No reviewers registered in this journal."
+msgstr "V tomto časopise nejsou registrováni žádní recenzenti."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Reviews completed"
+msgstr "Dokončené recenze"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Reviews in progress"
+msgstr "Probíhající recenze"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Reviews declined"
+msgstr "Odmítnuté recenze"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Average days to complete"
+msgstr "Průměrný počet dnů do dokončení"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.rating"
-msgstr "Quality rating (1 to 5)"
+msgstr "Hodnocení kvality (1 až 5)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Compl."
+msgstr "Dokonč."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "Active"
+msgstr "Aktivní"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Decl."
+msgstr "Odmít."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Avg (d)"
+msgstr "Prům. (dny)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Rating"
+msgstr "Hodnocení"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
-msgstr "Last assignment"
+msgstr "Poslední přidělení"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastCompleted"
-msgstr "Last completion"
+msgstr "Poslední dokončení"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.orcidVerified"
-msgstr "Verified ORCID"
+msgstr "Ověřené ORCID"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.columns"
-msgstr "Columns"
+msgstr "Sloupce"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.export"
 msgstr "Export (Excel)"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabDirectory"
-msgstr "Directory"
+msgstr "Adresář"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.tabNominata"
-msgstr "Roster"
+msgstr "Seznam"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataIntro"
-msgstr "Enter a period (review completion date) and/or an issue to list the reviewers who completed reviews within the selected scope. Useful for publishing the reviewer acknowledgement roster."
+msgstr "Zadejte období (datum dokončení recenze) a/nebo číslo, chcete-li vypsat recenzenty, kteří dokončili recenze ve zvoleném rozsahu. Hodí se pro zveřejnění poděkování recenzentům."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateFrom"
-msgstr "Completed from"
+msgstr "Dokončeno od"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.dateTo"
-msgstr "Completed to"
+msgstr "Dokončeno do"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue"
-msgstr "Issue"
+msgstr "Číslo"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.allIssues"
-msgstr "All issues"
+msgstr "Všechna čísla"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.generate"
-msgstr "Generate roster"
+msgstr "Vytvořit seznam"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
-msgstr "No reviewer completed reviews within the selected scope."
+msgstr "Ve zvoleném rozsahu nedokončil recenzi žádný recenzent."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} reviewer(s) completed {$reviews} review(s) within the selected scope."
+msgstr "{$n} recenzentů dokončilo {$reviews} recenzí ve zvoleném rozsahu."
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
-msgstr "Reviews completed in scope"
+msgstr "Recenze dokončené ve vybraném rozsahu"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.submissions"
-msgstr "Submissions"
+msgstr "Příspěvky"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.firstDate"
-msgstr "First"
+msgstr "První"
 
+#, fuzzy
 msgid "plugins.generic.reviewerDirectory.lastDate"
-msgstr "Last"
+msgstr "Poslední"

@@ -7,116 +7,116 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Language: fr\n"
 
 
 msgid "plugins.generic.reviewerDirectory.displayName"
-msgstr "Reviewer Directory"
+msgstr "Répertoire des évaluateurs"
 
 msgid "plugins.generic.reviewerDirectory.description"
-msgstr "Adds an internal page, restricted to managers and editors, to browse and filter every reviewer registered in the journal, with their profiles and review statistics."
+msgstr "Ajoute une page interne, réservée aux gestionnaires et aux rédacteurs, pour consulter et filtrer tous les évaluateurs enregistrés dans la revue, avec leurs profils et leurs statistiques d'évaluation."
 
 msgid "plugins.generic.reviewerDirectory.openDirectory"
-msgstr "Open directory"
+msgstr "Ouvrir le répertoire"
 
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
-msgstr "Search by name, affiliation, country, interest, email..."
+msgstr "Rechercher par nom, affiliation, pays, centre d'intérêt, courriel..."
 
 msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Only with ORCID"
+msgstr "Uniquement avec ORCID"
 
 msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Showing"
+msgstr "Affichage de"
 
 msgid "plugins.generic.reviewerDirectory.of"
-msgstr "of"
+msgstr "sur"
 
 msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "No reviewers registered in this journal."
+msgstr "Aucun évaluateur enregistré dans cette revue."
 
 msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Reviews completed"
+msgstr "Évaluations terminées"
 
 msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Reviews in progress"
+msgstr "Évaluations en cours"
 
 msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Reviews declined"
+msgstr "Évaluations refusées"
 
 msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Average days to complete"
+msgstr "Nombre moyen de jours pour terminer"
 
 msgid "plugins.generic.reviewerDirectory.rating"
-msgstr "Quality rating (1 to 5)"
+msgstr "Note de qualité (1 à 5)"
 
 msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Compl."
+msgstr "Term."
 
 msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "Active"
+msgstr "En cours"
 
 msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Decl."
+msgstr "Ref."
 
 msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Avg (d)"
+msgstr "Moy. (j)"
 
 msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Rating"
+msgstr "Note"
 
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
-msgstr "Last assignment"
+msgstr "Dernière assignation"
 
 msgid "plugins.generic.reviewerDirectory.lastCompleted"
-msgstr "Last completion"
+msgstr "Dernier achèvement"
 
 msgid "plugins.generic.reviewerDirectory.orcidVerified"
-msgstr "Verified ORCID"
+msgstr "ORCID vérifié"
 
 msgid "plugins.generic.reviewerDirectory.columns"
-msgstr "Columns"
+msgstr "Colonnes"
 
 msgid "plugins.generic.reviewerDirectory.export"
-msgstr "Export (Excel)"
+msgstr "Exporter (Excel)"
 
 msgid "plugins.generic.reviewerDirectory.tabDirectory"
-msgstr "Directory"
+msgstr "Répertoire"
 
 msgid "plugins.generic.reviewerDirectory.tabNominata"
-msgstr "Roster"
+msgstr "Liste de remerciements"
 
 msgid "plugins.generic.reviewerDirectory.nominataIntro"
-msgstr "Enter a period (review completion date) and/or an issue to list the reviewers who completed reviews within the selected scope. Useful for publishing the reviewer acknowledgement roster."
+msgstr "Saisissez une période (date d'achèvement de l'évaluation) et/ou un numéro pour lister les évaluateurs ayant terminé des évaluations dans le périmètre sélectionné. Utile pour publier la liste de remerciements aux évaluateurs."
 
 msgid "plugins.generic.reviewerDirectory.dateFrom"
-msgstr "Completed from"
+msgstr "Terminées à partir du"
 
 msgid "plugins.generic.reviewerDirectory.dateTo"
-msgstr "Completed to"
+msgstr "Terminées jusqu'au"
 
 msgid "plugins.generic.reviewerDirectory.issue"
-msgstr "Issue"
+msgstr "Numéro"
 
 msgid "plugins.generic.reviewerDirectory.allIssues"
-msgstr "All issues"
+msgstr "Tous les numéros"
 
 msgid "plugins.generic.reviewerDirectory.generate"
-msgstr "Generate roster"
+msgstr "Générer la liste"
 
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
-msgstr "No reviewer completed reviews within the selected scope."
+msgstr "Aucun évaluateur n'a terminé d'évaluation dans le périmètre sélectionné."
 
 msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} reviewer(s) completed {$reviews} review(s) within the selected scope."
+msgstr "{$n} évaluateur(s) ont terminé {$reviews} évaluation(s) dans le périmètre sélectionné."
 
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
-msgstr "Reviews completed in scope"
+msgstr "Évaluations terminées dans le périmètre"
 
 msgid "plugins.generic.reviewerDirectory.submissions"
-msgstr "Submissions"
+msgstr "Soumissions"
 
 msgid "plugins.generic.reviewerDirectory.firstDate"
-msgstr "First"
+msgstr "Première"
 
 msgid "plugins.generic.reviewerDirectory.lastDate"
-msgstr "Last"
+msgstr "Dernière"
