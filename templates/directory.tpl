@@ -1,10 +1,10 @@
 {**
- * templates/directory.tpl
+ * plugins/generic/reviewerDirectory/templates/directory.tpl
  *
- * Copyright (c) 2026 OJSBR (https://ojsbr.com.br)
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @brief Diretório interno de avaliadores + nominata (página de backend).
+ * Internal reviewer directory and reviewer roster (backend page).
  *}
 {extends file="layouts/backend.tpl"}
 
@@ -13,7 +13,7 @@
 		{translate key="plugins.generic.reviewerDirectory.displayName"}
 	</h1>
 
-	{* v-pre: impede o Vue do backend de recompilar este conteúdo server-rendered *}
+	{* v-pre: the backend's Vue must not compile this server-rendered content *}
 	<div class="rd-wrapper" v-pre>
 
 		<div class="rd-tabs">
@@ -21,13 +21,13 @@
 			<button type="button" class="rd-tab-btn {if $nominataRequested}rd-active{/if}" data-tab="nominata">{translate key="plugins.generic.reviewerDirectory.tabNominata"}</button>
 		</div>
 
-		{* ============================ DIRETÓRIO ============================ *}
+		{* ============================ DIRECTORY ============================ *}
 		<div class="rd-panel {if !$nominataRequested}rd-active{/if}" data-panel="directory">
 
 			<div class="rd-toolbar">
-				<input type="search" id="rd-search" placeholder="{translate key='plugins.generic.reviewerDirectory.searchPlaceholder'}" autocomplete="off">
+				<input type="search" id="rd-search" placeholder="{"plugins.generic.reviewerDirectory.searchPlaceholder"|translate|escape}" autocomplete="off">
 				<label><input type="checkbox" id="rd-orcid"> {translate key="plugins.generic.reviewerDirectory.onlyOrcid"}</label>
-				<button type="button" class="rd-btn" data-export-table="rd-table-directory" data-export-name="avaliadores.csv">{translate key="plugins.generic.reviewerDirectory.export"}</button>
+				<button type="button" class="rd-btn" data-export-table="rd-table-directory" data-export-name="reviewer-directory.csv">{translate key="plugins.generic.reviewerDirectory.export"}</button>
 				<span class="rd-count">{translate key="plugins.generic.reviewerDirectory.showing"} <strong><span id="rd-shown">{$reviewerCount}</span></strong> {translate key="plugins.generic.reviewerDirectory.of"} {$reviewerCount}</span>
 			</div>
 
@@ -47,7 +47,7 @@
 							<tr>
 								<th class="rd-col-name" data-col="0" data-sort="text">{translate key="user.name"}</th>
 								{foreach from=$columns item=col key=i}
-									<th class="rd-col-{$col.key|escape}{if !$col.default} rd-hidden{/if}" data-col="{$i+1}" data-sort="{$col.sort}"{if $col.title} title="{$col.title|escape}"{/if}>{$col.label|escape}</th>
+									<th class="rd-col-{$col.key|escape}{if !$col.default} rd-hidden{/if}" data-col="{$i+1}" data-sort="{$col.sort|escape}"{if $col.title} title="{$col.title|escape}"{/if}>{$col.label|escape}</th>
 								{/foreach}
 							</tr>
 						</thead>
@@ -59,7 +59,7 @@
 									<td class="rd-col-affiliation rd-hidden rd-affil">{$r.affiliation|escape}</td>
 									<td class="rd-col-country rd-hidden">{$r.country|escape}</td>
 									<td class="rd-col-orcid rd-hidden" data-val="{if $r.orcid}1{else}0{/if}">
-										{if $r.orcid}<a href="{$r.orcid|escape}" target="_blank" rel="noopener noreferrer">{if $r.orcidVerified}<span class="rd-orcid-badge" title="{translate key='plugins.generic.reviewerDirectory.orcidVerified'}">&#10003;</span> {/if}{$r.orcid|replace:"https://orcid.org/":""|replace:"http://orcid.org/":""|escape}</a>{else}&mdash;{/if}
+										{if $r.orcid}<a href="{$r.orcid|escape}" target="_blank" rel="noopener noreferrer">{if $r.orcidVerified}<span class="rd-orcid-badge" title="{"plugins.generic.reviewerDirectory.orcidVerified"|translate|escape}">&#10003;</span> {/if}{$r.orcid|replace:"https://orcid.org/":""|replace:"http://orcid.org/":""|escape}</a>{else}&mdash;{/if}
 									</td>
 									<td class="rd-col-username rd-hidden">{$r.username|escape}</td>
 									<td class="rd-col-email rd-hidden"><a href="mailto:{$r.email|escape}">{$r.email|escape}</a></td>
@@ -81,7 +81,7 @@
 			{/if}
 		</div>
 
-		{* ============================ NOMINATA ============================ *}
+		{* ============================ ROSTER ============================ *}
 		<div class="rd-panel {if $nominataRequested}rd-active{/if}" data-panel="nominata">
 
 			<p class="rd-hint">{translate key="plugins.generic.reviewerDirectory.nominataIntro"}</p>
@@ -117,7 +117,7 @@
 					<div class="rd-nom-summary">
 						{translate key="plugins.generic.reviewerDirectory.nominataSummary" n=$nominata.count reviews=$nominata.reviewsTotal}
 						{if $nominata.issueLabel} &mdash; <strong>{$nominata.issueLabel|escape}</strong>{/if}
-						<button type="button" class="rd-btn" style="margin-left:0.75rem;" data-export-table="rd-table-nominata" data-export-name="nominata.csv">{translate key="plugins.generic.reviewerDirectory.export"}</button>
+						<button type="button" class="rd-btn" data-export-table="rd-table-nominata" data-export-name="reviewer-roster.csv">{translate key="plugins.generic.reviewerDirectory.export"}</button>
 					</div>
 					<div class="rd-table-scroll">
 						<table class="rd-table" id="rd-table-nominata">
@@ -125,9 +125,9 @@
 								<tr>
 									<th data-col="0" data-sort="text">{translate key="user.name"}</th>
 									<th data-col="1" data-sort="text">{translate key="user.affiliation"}</th>
-									<th data-col="2" data-sort="text">ORCID</th>
+									<th data-col="2" data-sort="text">{translate key="user.orcid"}</th>
 									<th data-col="3" data-sort="text">{translate key="user.email"}</th>
-									<th data-col="4" data-sort="num" title="{translate key='plugins.generic.reviewerDirectory.reviewsInScope'}">{translate key="plugins.generic.reviewerDirectory.completedShort"}</th>
+									<th data-col="4" data-sort="num" title="{"plugins.generic.reviewerDirectory.reviewsInScope"|translate|escape}">{translate key="plugins.generic.reviewerDirectory.completedShort"}</th>
 									<th data-col="5" data-sort="text">{translate key="plugins.generic.reviewerDirectory.submissions"}</th>
 									<th data-col="6" data-sort="text">{translate key="plugins.generic.reviewerDirectory.firstDate"}</th>
 									<th data-col="7" data-sort="text">{translate key="plugins.generic.reviewerDirectory.lastDate"}</th>

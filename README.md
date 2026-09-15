@@ -1,24 +1,24 @@
 # Reviewer Directory — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.0.3-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.1.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/1.0.0.3/reviewerDirectory-1.0.0.3.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/1.0.1.0/reviewerDirectory-1.0.1.0.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that adds an **internal, editor-only
 directory of reviewers** — pulling the accounts that already hold the *Reviewer* role in the
 journal, with their profiles and review statistics — plus a **reviewer roster (nominata)** for
 a period or issue, ready to publish as an acknowledgement.
 
-> **Developed and maintained by [OJSBR](https://ojsbr.com.br).** See the
+> **Developed and maintained by [OJSBR](https://ojsbr.com).** See the
 > [Credits & authorship](#credits--authorship) section below.
 
 ## Compatibility & branches
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.0.3 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.1.0 |
 
 ## What it does
 
@@ -58,17 +58,48 @@ a period or issue, ready to publish as an acknowledgement.
 - Reviewers come straight from OJS accounts via `Repo::user()->getCollector()` with
   `includeReviewerData()` (statistics in a single query) and `preloadInterests()` (interests
   batched). Nothing is duplicated or stored by the plugin.
-- Active submissions, last completion date and the roster are resolved with batched
-  `review_assignments` queries (context-scoped through `submissions`; issues through
-  `publications.issue_id`), mirroring OJS's own definitions of *incomplete* / *completed*.
+- Active submissions, last completion date and the roster start from the core collectors
+  (`Repo::reviewAssignment()->getCollector()` scoped to the journal, and
+  `Repo::publication()->getCollector()` for an issue), with the plugin's own conditions added:
+  an active review is notified and not completed, declined or cancelled.
 - The page renders inside the OJS backend (Vue) using a `v-pre` wrapper so server-rendered
-  content is untouched; search, column toggles, sorting and export are inline, event-delegated
-  JavaScript. Access is enforced by `ContextAccessPolicy` with the manager/sub-editor roles.
+  content is untouched; search, column toggles, sorting and export are in
+  `js/reviewerDirectory.js` and the styles in `css/reviewerDirectory.css`, both added to backend
+  pages only. Access is enforced by `ContextAccessPolicy` with the manager, section editor and
+  administrator roles; the menu entry uses the same list.
+
+## Tests
+
+- **PHPUnit** (`tests/*Test.php`, on `PKP\tests\PKPTestCase`): the classes against the installed
+  PKP, the plugin found by PKP's plugin registry, the roles that may open the page, the roster
+  grouping (reviews, submissions, first and last dates), dates checked before they reach the
+  queries, the columns (personal data hidden by default), static assets, queries built on the
+  core collectors, the templates and the 38 translations. From the OJS root:
+
+  ```bash
+  lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/generic/reviewerDirectory/tests"
+  ```
+
+- **Cypress** (`cypress/tests/functional/ReviewerDirectory.cy.js`, run by
+  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on every push): enables the
+  plugin; an anonymous visitor ends at the login form; as an editor, the page loads its
+  stylesheet and script once, shows the menu shortcut, lists the reviewers, filters them by
+  name (and to none), hides and shows a column, builds the roster of a period and ignores an
+  impossible date. Each check fails with the part it covers removed.
+- Verified on OJS 3.5.0.3.
+
+Tests are kept in the repository and are not part of the release package.
 
 ## Credits & authorship
 
-- **Developed and maintained by** [OJSBR](https://ojsbr.com.br) — original plugin.
+- **Developed and maintained by** [OJSBR](https://ojsbr.com) — original plugin.
 - Distributed under the **GNU GPL v3**.
+
+## AI use
+
+Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring
+it in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible
+for the published releases.
 
 ## Contributing
 
@@ -88,14 +119,14 @@ avaliadores, restrito a editores** — puxando as contas que já têm o papel de
 revista, com seus perfis e estatísticas de avaliação — além de uma **nominata de avaliadores**
 por período ou edição, pronta para publicar como agradecimento.
 
-> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com.br).** Veja a seção
+> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Veja a seção
 > [Créditos e autoria](#créditos-e-autoria) abaixo.
 
 ### Compatibilidade e branches
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.0.0.0 |
+| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.0.1.0 |
 
 ### O que faz
 
@@ -129,10 +160,30 @@ em `plugins/generic/` (ficando `plugins/generic/reviewerDirectory/`). Depois ati
 **Reviewer Directory** na lista de plugins *Genéricos*. Acesse pela ação **"Abrir diretório"**
 na lista de plugins, ou em `/<revista>/reviewerdirectory`.
 
+### Testes
+
+PHPUnit em `tests/` (sobre `PKP\tests\PKPTestCase`) e Cypress em `cypress/tests/functional/`
+(rodado pelo [pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push), com o
+comando da seção em inglês. A suíte cobre as classes contra o PKP instalado, o plugin encontrado
+pelo registro de plugins, os papéis que abrem a página, o agrupamento da nominata, datas validadas
+antes das consultas, as colunas (dados pessoais ocultos por padrão), CSS e JS em arquivo,
+consultas sobre os collectors do núcleo, os templates e as 38 traduções. O Cypress liga o plugin,
+confere que o visitante anônimo cai no login e, como editor, que a página carrega CSS e JS uma
+vez, mostra o atalho no menu, lista e filtra os avaliadores, oculta e mostra uma coluna, gera a
+nominata de um período e ignora uma data impossível. Verificado no OJS 3.5.0.3.
+
+Os testes ficam no repositório e não fazem parte do pacote da release.
+
 ### Créditos e autoria
 
-- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com.br) — plugin autoral.
+- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com) — plugin autoral.
 - Distribuído sob a **GNU GPL v3**.
+
+### Uso de IA
+
+Foi usada IA generativa (Claude, da Anthropic) para escrever e rodar testes, melhorar o código e
+alinhá-lo aos padrões da PKP. Toda mudança é revisada e testada pela OJSBR, que responde pelas
+releases publicadas.
 
 ### Licença
 

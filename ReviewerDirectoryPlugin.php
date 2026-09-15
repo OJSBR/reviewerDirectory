@@ -1,16 +1,15 @@
 <?php
 
 /**
- * @file ReviewerDirectoryPlugin.php
+ * @file plugins/generic/reviewerDirectory/ReviewerDirectoryPlugin.php
  *
- * Copyright (c) 2026 OJSBR (https://ojsbr.com.br)
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerDirectoryPlugin
  *
- * @brief Diretório interno de avaliadores: página de backend, restrita a
- *  gerentes e editores, que lista e permite filtrar os usuários com papel de
- *  Avaliador cadastrados na revista.
+ * @brief Internal reviewer directory: a backend page, restricted to managers and
+ *  editors, that lists and filters the users with the Reviewer role in the journal.
  */
 
 namespace APP\plugins\generic\reviewerDirectory;
@@ -18,7 +17,6 @@ namespace APP\plugins\generic\reviewerDirectory;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
-use PKP\core\Registry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RedirectAction;
 use PKP\plugins\GenericPlugin;
@@ -27,8 +25,11 @@ use PKP\security\Role;
 
 class ReviewerDirectoryPlugin extends GenericPlugin
 {
-    /** Nome da página (rota) servida por este plugin. */
+    /** The page (route) served by the plugin. */
     public const PAGE = 'reviewerdirectory';
+
+    /** Roles that may open the directory: the handler and the menu entry use the same list. */
+    public const ALLOWED_ROLES = [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_SITE_ADMIN];
 
     /**
      * @copydoc Plugin::getDisplayName()
@@ -53,68 +54,48 @@ class ReviewerDirectoryPlugin extends GenericPlugin
      */
     public function register($category, $path, $mainContextId = null)
     {
-        if (parent::register($category, $path, $mainContextId)) {
-            if ($this->getEnabled($mainContextId)) {
-                // Registra a rota da página do diretório.
-                Hook::add('LoadHandler', $this->callbackLoadHandler(...));
-                // Acrescenta um atalho ao fim do menu lateral do painel (backend).
-                Hook::add('TemplateManager::setupBackendPage', $this->callbackSetupBackendPage(...));
-            }
-            return true;
+        $success = parent::register($category, $path, $mainContextId);
+        if ($success && $this->getEnabled($mainContextId)) {
+            Hook::add('LoadHandler', $this->callbackLoadHandler(...));
+            Hook::add('TemplateManager::setupBackendPage', $this->callbackSetupBackendPage(...));
         }
-        return false;
+
+        return $success;
     }
 
     /**
-     * Intercepta o roteamento para servir a página do diretório de avaliadores.
+     * Serves the directory page.
      *
      * @param string $hookName
-     * @param array $args [$page, $op, $sourceFile, $handler]
-     *
-     * @return bool
+     * @param array $args [&$page, &$op, &$sourceFile, &$handler]
      */
-    public function callbackLoadHandler($hookName, $args)
+    public function callbackLoadHandler($hookName, $args): bool
     {
-        $page = $args[0];
+        [&$page, &$op, &$sourceFile, &$handler] = $args;
         if ($page !== self::PAGE) {
-            return false;
+            return Hook::CONTINUE;
         }
 
-        $handler = &$args[3];
         $handler = new ReviewerDirectoryHandler($this);
-        return true;
+        return Hook::ABORT;
     }
 
     /**
-     * Acrescenta um atalho para o diretório ao FIM do menu lateral do painel
-     * (backend), poupando o editor de abri-lo pela tela de plugins. Visível
-     * apenas para gerentes, editores de seção e administradores — os mesmos
-     * papéis que o handler da página autoriza.
-     *
-     * @param string $hookName
-     * @param array $args [$templateMgr]
-     *
-     * @return bool
+     * Appends a shortcut to the directory at the end of the backend menu, for the roles
+     * the page authorizes. The hook is called without arguments.
      */
-    public function callbackSetupBackendPage($hookName, $args)
+    public function callbackSetupBackendPage($hookName, $args): bool
     {
         $request = Application::get()->getRequest();
         $context = $request->getContext();
         $user = $request->getUser();
-
-        // Sem contexto ou sem usuário não existe menu lateral para acrescentar.
         if (!$context || !$user) {
             return Hook::CONTINUE;
         }
 
-        // O hook dispara sem argumentos: o template manager vem do request.
         $templateMgr = TemplateManager::getManager($request);
         $menu = $templateMgr->getState('menu');
-        if (!is_array($menu) || !count($menu)) {
-            return Hook::CONTINUE;
-        }
-
-        if (!$this->userCanAccess($user->getId(), $context->getId())) {
+        if (!is_array($menu) || !$menu || !$this->userCanAccess($user->getId(), $context->getId())) {
             return Hook::CONTINUE;
         }
 
@@ -130,23 +111,19 @@ class ReviewerDirectoryPlugin extends GenericPlugin
     }
 
     /**
-     * O atalho só aparece para quem a página autoriza: gerentes, editores de
-     * seção e administradores do site.
+     * Whether the user holds one of the allowed roles in the journal, or is a site administrator.
      */
-    private function userCanAccess(int $userId, int $contextId): bool
+    protected function userCanAccess(int $userId, int $contextId): bool
     {
-        $allowedRoles = [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_SITE_ADMIN];
-
-        // Papéis na revista atual.
         foreach (Repo::userGroup()->userUserGroups($userId, $contextId) as $userGroup) {
-            if (in_array($userGroup->roleId, $allowedRoles)) {
+            if (in_array((int) $userGroup->roleId, self::ALLOWED_ROLES, true)) {
                 return true;
             }
         }
 
-        // Administrador do site é atribuído fora do contexto da revista.
+        // The site administrator role belongs to no journal: all the user's groups are checked.
         foreach (Repo::userGroup()->userUserGroups($userId) as $userGroup) {
-            if ($userGroup->roleId == Role::ROLE_ID_SITE_ADMIN) {
+            if ((int) $userGroup->roleId === Role::ROLE_ID_SITE_ADMIN) {
                 return true;
             }
         }
@@ -155,40 +132,29 @@ class ReviewerDirectoryPlugin extends GenericPlugin
     }
 
     /**
-     * URL da página do diretório no contexto atual.
+     * The URL of the directory in the current journal.
      */
     public function getDirectoryUrl($request): string
     {
-        return $request->getDispatcher()->url(
-            $request,
-            Application::ROUTE_PAGE,
-            null,
-            self::PAGE,
-            'index'
-        );
+        return $request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, self::PAGE, 'index');
     }
 
     /**
      * @copydoc Plugin::getActions()
-     *
-     * Adiciona um atalho "Abrir diretório" na listagem de plugins.
      */
     public function getActions($request, $actionArgs)
     {
         $actions = parent::getActions($request, $actionArgs);
-        if (!$this->getEnabled()) {
+        if (!$this->getEnabled() || !$request->getContext()) {
             return $actions;
         }
 
-        array_unshift(
-            $actions,
-            new LinkAction(
-                'openDirectory',
-                new RedirectAction($this->getDirectoryUrl($request)),
-                __('plugins.generic.reviewerDirectory.openDirectory'),
-                null
-            )
-        );
+        array_unshift($actions, new LinkAction(
+            'openDirectory',
+            new RedirectAction($this->getDirectoryUrl($request)),
+            __('plugins.generic.reviewerDirectory.openDirectory')
+        ));
+
         return $actions;
     }
 }
