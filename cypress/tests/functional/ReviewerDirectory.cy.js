@@ -25,7 +25,11 @@ describe('Reviewer Directory plugin', function() {
 
 	// Same as PKP's cy.waitJQuery(), which the support files of OJS 3.3 test sites may lack.
 	// The Plugins tab can keep requests open for a while (the plugin gallery), hence the timeout.
-	const waitJQuery = () => cy.window().its('jQuery.active', {timeout: 60000}).should('eq', 0);
+	// jQuery may not be on the page yet when this runs, so the check retries on the window
+	// itself instead of on a property that would resolve as undefined.
+	const waitJQuery = () => cy.window({timeout: 60000}).should((win) => {
+		expect(win.jQuery && win.jQuery.active, 'pending jQuery requests').to.eq(0);
+	});
 
 	// Requests carry the browser's User-Agent: OJS 3.3 drops a session whose agent changes.
 	const request = (options) => cy.window({log: false}).then((win) => cy.request(Object.assign(
@@ -159,6 +163,11 @@ describe('Reviewer Directory plugin', function() {
 		openDirectory('&rdNominata=1&rdDateFrom=2000-01-01&rdDateTo=2099-12-31&rdIssueId=0');
 		cy.get('.rd-panel[data-panel="nominata"]').should('have.class', 'rd-active');
 		cy.get('#rdDateFrom').should('have.value', '2000-01-01');
+		// Journals group submissions in issues and can filter the roster by one; a press has
+		// none, no issues endpoint either, and the field is not rendered at all.
+		request({url: pageUrl('api/v1/issues?count=1'), failOnStatusCode: false}).then((response) => {
+			cy.get('#rdIssueId').should(response.status === 404 ? 'not.exist' : 'exist');
+		});
 		// Either the roster or the message that nobody completed a review in the period.
 		cy.get('.rd-panel[data-panel="nominata"]').find('#rd-table-nominata, .rd-empty').should('have.length', 1);
 		cy.get('.rd-tab-btn[data-tab="directory"]').click();

@@ -1,24 +1,30 @@
-# Reviewer Directory — OJS plugin
+# Reviewer Directory — OJS and OMP plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.1.0-blue)](version.xml)
+[![OMP](https://img.shields.io/badge/OMP-3.5-brightgreen)](https://pkp.sfu.ca/omp/)
+[![Version](https://img.shields.io/badge/version-1.0.2.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/1.0.1.0/reviewerDirectory-1.0.1.0.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/1.0.2.0/reviewerDirectory-1.0.2.0.tar.gz) — or browse all [Releases](../../releases).
 
-A generic plugin for **Open Journal Systems (OJS)** that adds an **internal, editor-only
-directory of reviewers** — pulling the accounts that already hold the *Reviewer* role in the
-journal, with their profiles and review statistics — plus a **reviewer roster (nominata)** for
-a period or issue, ready to publish as an acknowledgement.
+A generic plugin for **Open Journal Systems (OJS)** and **Open Monograph Press (OMP)** that
+adds an **internal, editor-only directory of reviewers** — pulling the accounts that already
+hold the *Reviewer* role in the journal or press, with their profiles and review statistics —
+plus a **reviewer roster (nominata)** for a period (and, in OJS, for an issue), ready to
+publish as an acknowledgement.
 
 > **Developed and maintained by [OJSBR](https://ojsbr.com).** See the
 > [Credits & authorship](#credits--authorship) section below.
 
 ## Compatibility & branches
 
-| OJS version | Branch | Plugin release |
+| Application | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.1.0 |
+| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.2.0 |
+
+> Since 1.0.2.0 the same package serves OJS and OMP. The former `reviewerDirectoryOmp`
+> repository is archived; its releases stay available there. The roster filter by issue is
+> shown only in OJS: a press has no issues, and there the roster is filtered by date.
 
 ## What it does
 
@@ -86,7 +92,7 @@ a period or issue, ready to publish as an acknowledgement.
   stylesheet and script once, shows the menu shortcut, lists the reviewers, filters them by
   name (and to none), hides and shows a column, builds the roster of a period and ignores an
   impossible date. Each check fails with the part it covers removed.
-- Verified on OJS 3.5.0.3.
+- Verified on OJS 3.5.0.3 and OMP 3.5.0.3, each with the whole suite.
 
 Tests are kept in the repository and are not part of the release package.
 
@@ -116,17 +122,21 @@ Distributed under the **GNU GPL v3**. See [`LICENSE`](LICENSE) and `docs/COPYING
 
 Plugin genérico para o **Open Journal Systems (OJS)** que adiciona um **diretório interno de
 avaliadores, restrito a editores** — puxando as contas que já têm o papel de *Avaliador* na
-revista, com seus perfis e estatísticas de avaliação — além de uma **nominata de avaliadores**
-por período ou edição, pronta para publicar como agradecimento.
+revista ou na editora, com seus perfis e estatísticas de avaliação — além de uma **nominata de
+avaliadores** por período (e, no OJS, por edição), pronta para publicar como agradecimento.
 
 > **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Veja a seção
 > [Créditos e autoria](#créditos-e-autoria) abaixo.
 
 ### Compatibilidade e branches
 
-| Versão do OJS | Branch | Release do plugin |
-|---------------|--------|-------------------|
-| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.0.1.0 |
+| Aplicação | Branch | Release do plugin |
+|-----------|--------|-------------------|
+| OJS 3.5.x e OMP 3.5.x | `stable-3_5_0` *(padrão)* | 1.0.2.0 |
+
+> A partir da 1.0.2.0 o mesmo pacote serve OJS e OMP. O repositório `reviewerDirectoryOmp`
+> está arquivado; as releases dele continuam disponíveis lá. O filtro da nominata por edição
+> só aparece no OJS: uma editora não tem edições, e lá a nominata é filtrada por data.
 
 ### O que faz
 
@@ -170,7 +180,7 @@ antes das consultas, as colunas (dados pessoais ocultos por padrão), CSS e JS e
 consultas sobre os collectors do núcleo, os templates e as 38 traduções. O Cypress liga o plugin,
 confere que o visitante anônimo cai no login e, como editor, que a página carrega CSS e JS uma
 vez, mostra o atalho no menu, lista e filtra os avaliadores, oculta e mostra uma coluna, gera a
-nominata de um período e ignora uma data impossível. Verificado no OJS 3.5.0.3.
+nominata de um período e ignora uma data impossível. Verificado no OJS 3.5.0.3 e no OMP 3.5.0.3, com a suíte inteira em cada um.
 
 Os testes ficam no repositório e não fazem parte do pacote da release.
 

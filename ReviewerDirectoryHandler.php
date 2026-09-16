@@ -9,7 +9,7 @@
  * @class ReviewerDirectoryHandler
  *
  * @brief The backend page with the reviewer directory and the reviewer roster
- *  (reviewers who completed reviews in a period or issue).
+ *  (reviewers who completed reviews in a period or, in OJS, in an issue).
  */
 
 namespace APP\plugins\generic\reviewerDirectory;
@@ -111,7 +111,7 @@ class ReviewerDirectoryHandler extends Handler
     }
 
     /**
-     * The reviewers of the journal with their profile, statistics and active reviews.
+     * The reviewers of the journal or press with their profile, statistics and active reviews.
      *
      * @return array<int, array<string, mixed>>
      */
@@ -166,7 +166,7 @@ class ReviewerDirectoryHandler extends Handler
     }
 
     /**
-     * The review assignments of the journal, from the core collector.
+     * The review assignments of the journal or press, from the core collector.
      */
     protected function reviewAssignments(int $contextId, ?array $reviewerIds = null)
     {
@@ -211,7 +211,7 @@ class ReviewerDirectoryHandler extends Handler
     }
 
     /**
-     * The date of the last review each reviewer completed in the journal.
+     * The date of the last review each reviewer completed in the journal or press.
      *
      * @return array<int, string> [reviewerId => 'YYYY-MM-DD HH:MM:SS']
      */
@@ -232,12 +232,18 @@ class ReviewerDirectoryHandler extends Handler
     }
 
     /**
-     * The issues of the journal, for the roster form.
+     * The issues of the journal, for the roster form (a press has none).
      *
      * @return array<int, array{id: int, label: string}>
      */
     protected function getIssues(int $contextId): array
     {
+        // Journals group articles in issues; a press has no equivalent, so the roster there is
+        // filtered by date only.
+        if (!method_exists(Repo::class, 'issue')) {
+            return [];
+        }
+
         $issues = [];
         $collector = Repo::issue()->getCollector()
             ->filterByContextIds([$contextId])
@@ -263,7 +269,7 @@ class ReviewerDirectoryHandler extends Handler
             ->when($dateTo !== '', fn ($q) => $q->whereDate('ra.date_completed', '<=', $dateTo));
 
         $issueLabel = '';
-        if ($issueId > 0) {
+        if ($issueId > 0 && method_exists(Repo::class, 'issue')) {
             $submissionIds = Repo::publication()->getCollector()
                 ->filterByContextIds([$contextId])
                 ->filterByIssueIds([$issueId])

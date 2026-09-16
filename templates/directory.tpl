@@ -96,6 +96,7 @@
 					<label for="rdDateTo">{translate key="plugins.generic.reviewerDirectory.dateTo"}</label>
 					<input type="date" id="rdDateTo" name="rdDateTo" value="{$rdDateTo|escape}">
 				</div>
+				{if $issues}
 				<div class="rd-field">
 					<label for="rdIssueId">{translate key="plugins.generic.reviewerDirectory.issue"}</label>
 					<select id="rdIssueId" name="rdIssueId">
@@ -105,6 +106,7 @@
 						{/foreach}
 					</select>
 				</div>
+				{/if}
 				<div class="rd-field">
 					<button type="submit" class="rd-btn">{translate key="plugins.generic.reviewerDirectory.generate"}</button>
 				</div>
