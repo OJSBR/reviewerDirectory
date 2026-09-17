@@ -158,6 +158,43 @@ describe('Reviewer Directory plugin', function() {
 		cy.get('th.rd-col-interests').should('not.have.class', 'rd-hidden');
 	});
 
+
+	// The page shows numbers about each reviewer. A number nobody checks is a
+	// number nobody can trust: these are compared, one by one, with what the core
+	// itself answers for the same journal.
+	it('Shows the same review counts the journal itself reports', function() {
+		login(adminUser, adminPassword);
+		openDirectory();
+
+		cy.get('#rd-table-directory tbody tr[data-rd-row]').should('have.length.at.least', 1).then(($rows) => {
+			const shown = {};
+			$rows.toArray().forEach((tr) => {
+				const username = (tr.querySelector('.rd-col-username') || {}).textContent;
+				if (!username) {
+					return;
+				}
+				shown[username.trim()] = {
+					completed: Number((tr.querySelector('.rd-col-completed') || {}).getAttribute('data-val')),
+					declined: Number((tr.querySelector('.rd-col-declined') || {}).getAttribute('data-val')),
+				};
+			});
+			expect(Object.keys(shown), 'the directory lists reviewers with a username').to.not.be.empty;
+
+			return api(pageUrl('api/v1/users/reviewers?count=100')).then((reviewers) => {
+				const answered = (reviewers.items || []).filter((item) => shown[item.userName || item.username]);
+				expect(answered, 'the journal answers for the reviewers on the page').to.not.be.empty;
+
+				answered.forEach((reviewer) => {
+					const row = shown[reviewer.userName || reviewer.username];
+					expect(row.completed, 'reviews completed by ' + (reviewer.userName || reviewer.username))
+						.to.eq(Number(reviewer.reviewsCompleted || 0));
+					expect(row.declined, 'reviews declined by ' + (reviewer.userName || reviewer.username))
+						.to.eq(Number(reviewer.reviewsDeclined || 0));
+				});
+			});
+		});
+	});
+
 	it('Builds the reviewer roster of a period', function() {
 		login(adminUser, adminPassword);
 		openDirectory('&rdNominata=1&rdDateFrom=2000-01-01&rdDateTo=2099-12-31&rdIssueId=0');
