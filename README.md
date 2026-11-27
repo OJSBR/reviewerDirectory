@@ -117,9 +117,9 @@ Tests are kept in the repository and are not part of the release package.
 
 ## Languages
 
-38 languages. The texts of the former release keep their translations; the new texts are reviewed in
-English, Portuguese (Brazil and Portugal) and Spanish, and are shown in English, marked *fuzzy*, in
-the other languages until a speaker reviews them.
+38 languages, every locale of OJS/OMP 3.5. English, Portuguese (Brazil and Portugal) and Spanish are
+reviewed by the team; the others follow the terms of OJS itself in each language and are marked
+*fuzzy* until a speaker reviews them (OJS shows them all the same). Corrections are welcome.
 
 ## Credits & authorship
 
@@ -236,9 +236,9 @@ CSV com as linhas da tela; avaliador barrado. Conferido no OJS e no OMP 3.5.
 
 ### Idiomas
 
-38 idiomas. Os textos da versão anterior mantêm as traduções; os textos novos estão revisados em
-inglês, português (Brasil e Portugal) e espanhol, e aparecem em inglês, marcados como *fuzzy*, nos
-demais idiomas até um falante revisar.
+38 idiomas, todos os do OJS/OMP 3.5. Inglês, português (Brasil e Portugal) e espanhol são revisados
+pela equipe; os demais seguem os termos do próprio OJS em cada idioma e ficam marcados como *fuzzy*
+até um falante revisar (o OJS mostra do mesmo jeito). Correções são bem-vindas.
 
 ### Créditos e autoria
 

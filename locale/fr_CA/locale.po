@@ -79,99 +79,99 @@ msgstr "Dernière"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue"
-msgstr "Overdue"
+msgstr "En retard"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue.description"
-msgstr "Has a review whose response or review is past its due date."
+msgstr "A une évaluation dont la réponse ou le rapport a dépassé l'échéance."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy"
-msgstr "Busy"
+msgstr "Très sollicités"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy.description"
-msgstr "Three or more reviews in progress, none overdue."
+msgstr "Trois évaluations en cours ou plus, aucune en retard."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing"
-msgstr "Reviewing"
+msgstr "En évaluation"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing.description"
-msgstr "One or two reviews in progress, none overdue."
+msgstr "Une ou deux évaluations en cours, aucune en retard."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent"
-msgstr "Available, active"
+msgstr "Disponibles, actifs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent.description"
-msgstr "No review in progress; completed a review for the journal in the last 12 months."
+msgstr "Aucune évaluation en cours; a terminé une évaluation pour la revue au cours des 12 derniers mois."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle"
-msgstr "Available, idle"
+msgstr "Disponibles, inactifs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle.description"
-msgstr "No review in progress; their last review for the journal is more than 12 months old."
+msgstr "Aucune évaluation en cours; sa dernière évaluation pour la revue date de plus de 12 mois."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new"
-msgstr "Never reviewed"
+msgstr "N'ont jamais évalué"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new.description"
-msgstr "Never completed a review for the journal and has none in progress."
+msgstr "N'a jamais terminé d'évaluation pour la revue et n'en a aucune en cours."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available"
-msgstr "Available now"
+msgstr "Disponibles maintenant"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available.description"
-msgstr "No review in progress for the journal."
+msgstr "Aucune évaluation en cours pour la revue."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing"
-msgstr "Reviewing now"
+msgstr "En évaluation actuellement"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing.description"
-msgstr "At least one review in progress for the journal."
+msgstr "Au moins une évaluation en cours pour la revue."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue"
-msgstr "With overdue reviews"
+msgstr "Avec des évaluations en retard"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue.description"
-msgstr "A response or a review past its due date."
+msgstr "Une réponse ou une évaluation a dépassé l'échéance."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent"
-msgstr "Reviewed in the last 12 months"
+msgstr "Ont évalué au cours des 12 derniers mois"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent.description"
-msgstr "Completed at least one review for the journal in the last 12 months."
+msgstr "Ont terminé au moins une évaluation pour la revue au cours des 12 derniers mois."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never"
-msgstr "Never reviewed for the journal"
+msgstr "N'ont jamais évalué pour la revue"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never.description"
-msgstr "No review completed for the journal yet."
+msgstr "Aucune évaluation terminée pour la revue à ce jour."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid"
-msgstr "Without ORCID"
+msgstr "Sans ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid.description"
-msgstr "No ORCID iD in the profile."
+msgstr "Aucun identifiant ORCID dans le profil."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.situation"
@@ -179,135 +179,135 @@ msgstr "Situation"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active"
-msgstr "In progress"
+msgstr "En cours"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active.description"
-msgstr "Reviews in progress for the journal (requested and not yet completed, declined or cancelled), with their submissions."
+msgstr "Évaluations en cours pour la revue (demandées et pas encore terminées, refusées ni annulées), avec leurs soumissions."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue"
-msgstr "Overdue"
+msgstr "En retard"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue.description"
-msgstr "Reviews in progress with the response or the review past its due date."
+msgstr "Évaluations en cours dont la réponse ou le rapport a dépassé l'échéance."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed"
-msgstr "Completed"
+msgstr "Terminées"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed.description"
-msgstr "Reviews completed for this journal."
+msgstr "Évaluations terminées pour cette revue."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent"
-msgstr "Last 12 months"
+msgstr "12 derniers mois"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent.description"
-msgstr "Reviews completed for this journal in the last 12 months."
+msgstr "Évaluations terminées pour cette revue au cours des 12 derniers mois."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests"
-msgstr "Requests"
+msgstr "Demandes"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests.description"
-msgstr "Review requests from this journal, cancelled ones left out."
+msgstr "Demandes d'évaluation de cette revue, hors demandes annulées."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance"
-msgstr "Acceptance"
+msgstr "Acceptation"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance.description"
-msgstr "Requests accepted out of the requests answered, in this journal."
+msgstr "Demandes acceptées parmi les demandes ayant reçu une réponse, dans cette revue."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime"
-msgstr "On time"
+msgstr "Dans les délais"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime.description"
-msgstr "Reviews completed by their due date, out of the reviews completed for this journal."
+msgstr "Évaluations terminées avant l'échéance, parmi les évaluations terminées pour cette revue."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays"
-msgstr "Average days"
+msgstr "Jours en moyenne"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays.description"
-msgstr "Average days from the request to the review, in this journal."
+msgstr "Nombre moyen de jours entre la demande et l'évaluation, dans cette revue."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastCompleted.description"
-msgstr "Last review completed for this journal."
+msgstr "Dernière évaluation terminée pour cette revue."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs"
-msgstr "In OJS: completed · declined · average"
+msgstr "Dans OJS : terminées · refusées · moyenne"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs.description"
-msgstr "The numbers OJS shows when an editor chooses a reviewer. Unless the site administrator turned the sharing off, they cover every journal of the site."
+msgstr "Les chiffres qu'OJS affiche lorsqu'un rédacteur choisit un évaluateur. Sauf si l'administrateur du site a désactivé le partage, ils couvrent toutes les revues du site."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.rating.description"
-msgstr "Average of the ratings editors gave the reviewer's reviews, as OJS shows it."
+msgstr "Moyenne des notes attribuées par les rédacteurs aux évaluations de l'évaluateur, telle qu'OJS l'affiche."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastAssigned.description"
-msgstr "Last review request, as OJS shows it."
+msgstr "Dernière demande d'évaluation, telle qu'OJS l'affiche."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.activeSubmissions"
-msgstr "Submissions in review"
+msgstr "Soumissions en évaluation"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsCompleted"
-msgstr "Completed (OJS)"
+msgstr "Terminées (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsDeclined"
-msgstr "Declined (OJS)"
+msgstr "Refusées (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsAverageDays"
-msgstr "Average days (OJS)"
+msgstr "Jours en moyenne (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.interest.description"
-msgstr "Reviewers with an interest that contains this text."
+msgstr "Évaluateurs ayant un intérêt qui contient ce texte."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.any"
-msgstr "Any"
+msgstr "Indifférent"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.with"
-msgstr "With ORCID"
+msgstr "Avec ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.without"
-msgstr "Without ORCID"
+msgstr "Sans ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.verified"
-msgstr "Verified ORCID"
+msgstr "ORCID vérifié"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.minCompleted"
-msgstr "At least this many reviews completed for the journal"
+msgstr "Nombre minimal d'évaluations terminées pour la revue"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle"
-msgstr "Months without completing a review"
+msgstr "Mois sans évaluation terminée"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle.description"
-msgstr "Reviewers whose last review for the journal is at least this old, or who never completed one."
+msgstr "Évaluateurs dont la dernière évaluation pour la revue date d'au moins ce nombre de mois, ou qui n'en ont jamais terminé."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.csv"
@@ -315,43 +315,43 @@ msgstr "CSV (Excel, LibreOffice)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.xlsx"
-msgstr "Excel workbook (XLSX)"
+msgstr "Classeur Excel (XLSX)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.filePrefix"
-msgstr "reviewers"
+msgstr "evaluateurs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.rosterFilePrefix"
-msgstr "reviewer roster"
+msgstr "liste-evaluateurs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.firstLine"
-msgstr "{$context} — generated on {$date} by {$user} — {$filters}"
+msgstr "{$context} — généré le {$date} par {$user} — {$filters}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rosterPeriod"
-msgstr "Reviews completed between {$from} and {$to}"
+msgstr "Évaluations terminées entre le {$from} et le {$to}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue.description"
-msgstr "Only the reviews of the articles of this issue."
+msgstr "Uniquement les évaluations des articles de ce numéro."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.allReviewers"
-msgstr "All reviewers"
+msgstr "Tous les évaluateurs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.totalCount"
-msgstr "Total: {$n}"
+msgstr "Total : {$n}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.generatedAt"
-msgstr "Generated on {$date}"
+msgstr "Généré le {$date}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportTitle"
-msgstr "Export what is filtered"
+msgstr "Exporter les résultats filtrés"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportFormat"
@@ -359,63 +359,63 @@ msgstr "Format"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.download"
-msgstr "Download"
+msgstr "Télécharger"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesHeading"
-msgstr "The reviewer pool"
+msgstr "Le bassin d'évaluateurs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesNote"
-msgstr "Everyone with the Reviewer role in the journal. Choose a group to list its reviewers."
+msgstr "Toutes les personnes ayant le rôle d'évaluateur dans la revue. Choisissez un groupe pour en lister les évaluateurs."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesFiltered"
-msgstr "With the filters in use."
+msgstr "Avec les filtres appliqués."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratesHeading"
-msgstr "Indices of the listed reviewers in this journal"
+msgstr "Indicateurs des évaluateurs listés dans cette revue"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance"
-msgstr "Acceptance"
+msgstr "Acceptation des demandes"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance.description"
-msgstr "Requests accepted out of the requests answered."
+msgstr "Demandes acceptées parmi les demandes ayant reçu une réponse."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime"
-msgstr "Reviews on time"
+msgstr "Évaluations dans les délais"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime.description"
-msgstr "Reviews completed by their due date, out of all completed reviews."
+msgstr "Évaluations terminées avant l'échéance, parmi toutes les évaluations terminées."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays"
-msgstr "From request to review"
+msgstr "De la demande à l'évaluation"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays.description"
-msgstr "Average days from the request to the review, over all completed reviews."
+msgstr "Nombre moyen de jours entre la demande et l'évaluation, sur l'ensemble des évaluations terminées."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress"
-msgstr "Reviews in progress"
+msgstr "Évaluations en cours"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress.description"
-msgstr "Submissions in review with the listed reviewers now."
+msgstr "Soumissions présentement en évaluation auprès des évaluateurs listés."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent"
-msgstr "Reviews in the last 12 months"
+msgstr "Évaluations des 12 derniers mois"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent.description"
-msgstr "Reviews the listed reviewers completed for the journal in the last 12 months."
+msgstr "Évaluations terminées par les évaluateurs listés pour la revue au cours des 12 derniers mois."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryHeading"
@@ -423,92 +423,92 @@ msgstr "Situation"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryDescription"
-msgstr "One situation per reviewer, the first that applies in this order, so the numbers add up. Choose one or more to list only their reviewers."
+msgstr "Une seule situation par évaluateur, la première qui s'applique dans cet ordre, afin que les totaux concordent. Choisissez-en une ou plusieurs pour ne lister que les évaluateurs correspondants."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryClear"
-msgstr "Show every situation"
+msgstr "Afficher toutes les situations"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersShow"
-msgstr "Show filters"
+msgstr "Afficher les filtres"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersHide"
-msgstr "Hide filters"
+msgstr "Masquer les filtres"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeFilters"
-msgstr "Active filters"
+msgstr "Filtres actifs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.columnsReset"
-msgstr "Default columns"
+msgstr "Colonnes par défaut"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.loadError"
-msgstr "The directory could not be loaded."
+msgstr "Le répertoire n'a pas pu être chargé."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.retry"
-msgstr "Try again"
+msgstr "Réessayer"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.pageOf"
-msgstr "Page {$page} of {$lastPage}"
+msgstr "Page {$page} de {$lastPage}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.percent"
-msgstr "{$percent}%"
+msgstr "{$percent} %"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.days"
-msgstr "{$days} days"
+msgstr "{$days} jours"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.monthsAgo"
-msgstr "{$months} months ago"
+msgstr "il y a {$months} mois"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.thisMonth"
-msgstr "this month"
+msgstr "ce mois-ci"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.none"
-msgstr "None"
+msgstr "Aucune"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.openSubmission"
-msgstr "Open submission {$id} in a new tab"
+msgstr "Ouvrir la soumission {$id} dans un nouvel onglet"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.mailto"
-msgstr "Write to {$name}"
+msgstr "Écrire à {$name}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ojsNote"
-msgstr "As OJS shows it when choosing a reviewer: completed · declined · average days"
+msgstr "Tels qu'OJS les affiche lors du choix d'un évaluateur : terminées · refusées · jours en moyenne"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingOf"
-msgstr "Rated {$rating} out of 5"
+msgstr "Note : {$rating} sur 5"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.reviewers"
-msgstr "Reviewers"
+msgstr "Évaluateurs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.countries"
-msgstr "Countries"
+msgstr "Pays"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copy"
-msgstr "Copy the list for publishing"
+msgstr "Copier la liste pour publication"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copied"
-msgstr "Copied."
+msgstr "Copié."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copyDescription"
-msgstr "One reviewer per line, in alphabetical order, with affiliation and country: ready to paste into the acknowledgement page or the issue."
+msgstr "Un évaluateur par ligne, en ordre alphabétique, avec affiliation et pays : prêt à coller dans la page de remerciements ou dans le numéro."

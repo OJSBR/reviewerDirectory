@@ -79,235 +79,235 @@ msgstr "Última"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue"
-msgstr "Overdue"
+msgstr "Amb retard"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue.description"
-msgstr "Has a review whose response or review is past its due date."
+msgstr "Té una revisió amb la resposta o l'informe fora de termini."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy"
-msgstr "Busy"
+msgstr "Saturats"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy.description"
-msgstr "Three or more reviews in progress, none overdue."
+msgstr "Tres o més revisions en curs, cap amb retard."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing"
-msgstr "Reviewing"
+msgstr "Revisant"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing.description"
-msgstr "One or two reviews in progress, none overdue."
+msgstr "Una o dues revisions en curs, cap amb retard."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent"
-msgstr "Available, active"
+msgstr "Disponibles, actius"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent.description"
-msgstr "No review in progress; completed a review for the journal in the last 12 months."
+msgstr "Sense revisions en curs; ha completat una revisió per a la revista en els darrers 12 mesos."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle"
-msgstr "Available, idle"
+msgstr "Disponibles, inactius"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle.description"
-msgstr "No review in progress; their last review for the journal is more than 12 months old."
+msgstr "Sense revisions en curs; la seva darrera revisió per a la revista té més de 12 mesos."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new"
-msgstr "Never reviewed"
+msgstr "No han revisat mai"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new.description"
-msgstr "Never completed a review for the journal and has none in progress."
+msgstr "No ha completat mai cap revisió per a la revista i no en té cap en curs."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available"
-msgstr "Available now"
+msgstr "Disponibles ara"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available.description"
-msgstr "No review in progress for the journal."
+msgstr "Cap revisió en curs a la revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing"
-msgstr "Reviewing now"
+msgstr "Revisant ara"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing.description"
-msgstr "At least one review in progress for the journal."
+msgstr "Almenys una revisió en curs a la revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue"
-msgstr "With overdue reviews"
+msgstr "Amb revisions endarrerides"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue.description"
-msgstr "A response or a review past its due date."
+msgstr "Resposta o informe fora de termini."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent"
-msgstr "Reviewed in the last 12 months"
+msgstr "Han revisat en els darrers 12 mesos"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent.description"
-msgstr "Completed at least one review for the journal in the last 12 months."
+msgstr "Han completat almenys una revisió per a la revista en els darrers 12 mesos."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never"
-msgstr "Never reviewed for the journal"
+msgstr "No han revisat mai per a la revista"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never.description"
-msgstr "No review completed for the journal yet."
+msgstr "Encara cap revisió completada per a la revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid"
-msgstr "Without ORCID"
+msgstr "Sense ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid.description"
-msgstr "No ORCID iD in the profile."
+msgstr "Sense ORCID iD al perfil."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.situation"
-msgstr "Situation"
+msgstr "Situació"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active"
-msgstr "In progress"
+msgstr "En curs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active.description"
-msgstr "Reviews in progress for the journal (requested and not yet completed, declined or cancelled), with their submissions."
+msgstr "Revisions en curs a la revista (sol·licitades i encara no completades, rebutjades ni cancel·lades), amb les seves trameses."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue"
-msgstr "Overdue"
+msgstr "Endarrerides"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue.description"
-msgstr "Reviews in progress with the response or the review past its due date."
+msgstr "Revisions en curs amb la resposta o l'informe fora de termini."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed"
-msgstr "Completed"
+msgstr "Completades"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed.description"
-msgstr "Reviews completed for this journal."
+msgstr "Revisions completades per a aquesta revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent"
-msgstr "Last 12 months"
+msgstr "Darrers 12 mesos"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent.description"
-msgstr "Reviews completed for this journal in the last 12 months."
+msgstr "Revisions completades per a aquesta revista en els darrers 12 mesos."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests"
-msgstr "Requests"
+msgstr "Sol·licituds"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests.description"
-msgstr "Review requests from this journal, cancelled ones left out."
+msgstr "Sol·licituds de revisió d'aquesta revista, sense comptar les cancel·lades."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance"
-msgstr "Acceptance"
+msgstr "Acceptació"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance.description"
-msgstr "Requests accepted out of the requests answered, in this journal."
+msgstr "Sol·licituds acceptades d'entre les respostes, en aquesta revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime"
-msgstr "On time"
+msgstr "A temps"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime.description"
-msgstr "Reviews completed by their due date, out of the reviews completed for this journal."
+msgstr "Informes lliurats dins del termini, d'entre les revisions completades per a aquesta revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays"
-msgstr "Average days"
+msgstr "Mitjana de dies"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays.description"
-msgstr "Average days from the request to the review, in this journal."
+msgstr "Mitjana de dies entre la sol·licitud i l'informe, en aquesta revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastCompleted.description"
-msgstr "Last review completed for this journal."
+msgstr "Darrera revisió completada per a aquesta revista."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs"
-msgstr "In OJS: completed · declined · average"
+msgstr "A OJS: completades · rebutjades · mitjana"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs.description"
-msgstr "The numbers OJS shows when an editor chooses a reviewer. Unless the site administrator turned the sharing off, they cover every journal of the site."
+msgstr "Els números que OJS mostra a l'editor/a en triar un revisor/a. Llevat que l'administrador/a del lloc hagi desactivat la compartició, sumen totes les revistes del lloc."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.rating.description"
-msgstr "Average of the ratings editors gave the reviewer's reviews, as OJS shows it."
+msgstr "Mitjana de les valoracions que els editors han donat als informes del revisor/a, tal com la mostra OJS."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastAssigned.description"
-msgstr "Last review request, as OJS shows it."
+msgstr "Darrera sol·licitud de revisió, tal com la mostra OJS."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.activeSubmissions"
-msgstr "Submissions in review"
+msgstr "Trameses en revisió"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsCompleted"
-msgstr "Completed (OJS)"
+msgstr "Completades (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsDeclined"
-msgstr "Declined (OJS)"
+msgstr "Rebutjades (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsAverageDays"
-msgstr "Average days (OJS)"
+msgstr "Mitjana de dies (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.interest.description"
-msgstr "Reviewers with an interest that contains this text."
+msgstr "Revisors amb algun interès que contingui aquest text."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.any"
-msgstr "Any"
+msgstr "Qualsevol"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.with"
-msgstr "With ORCID"
+msgstr "Amb ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.without"
-msgstr "Without ORCID"
+msgstr "Sense ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.verified"
-msgstr "Verified ORCID"
+msgstr "ORCID verificat"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.minCompleted"
-msgstr "At least this many reviews completed for the journal"
+msgstr "Mínim de revisions completades per a la revista"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle"
-msgstr "Months without completing a review"
+msgstr "Mesos sense completar cap revisió"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle.description"
-msgstr "Reviewers whose last review for the journal is at least this old, or who never completed one."
+msgstr "Revisors la darrera revisió dels quals per a la revista té almenys aquesta antiguitat, o que no n'han completat mai cap."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.csv"
@@ -315,31 +315,31 @@ msgstr "CSV (Excel, LibreOffice)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.xlsx"
-msgstr "Excel workbook (XLSX)"
+msgstr "Llibre d'Excel (XLSX)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.filePrefix"
-msgstr "reviewers"
+msgstr "revisors"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.rosterFilePrefix"
-msgstr "reviewer roster"
+msgstr "llista-de-revisors"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.firstLine"
-msgstr "{$context} — generated on {$date} by {$user} — {$filters}"
+msgstr "{$context} — generat el {$date} per {$user} — {$filters}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rosterPeriod"
-msgstr "Reviews completed between {$from} and {$to}"
+msgstr "Revisions completades entre el {$from} i el {$to}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue.description"
-msgstr "Only the reviews of the articles of this issue."
+msgstr "Només les revisions dels articles d'aquest número."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.allReviewers"
-msgstr "All reviewers"
+msgstr "Tots els revisors"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.totalCount"
@@ -347,11 +347,11 @@ msgstr "Total: {$n}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.generatedAt"
-msgstr "Generated on {$date}"
+msgstr "Generat el {$date}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportTitle"
-msgstr "Export what is filtered"
+msgstr "Exporta el que està filtrat"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportFormat"
@@ -359,156 +359,156 @@ msgstr "Format"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.download"
-msgstr "Download"
+msgstr "Baixa"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesHeading"
-msgstr "The reviewer pool"
+msgstr "L'equip de revisors"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesNote"
-msgstr "Everyone with the Reviewer role in the journal. Choose a group to list its reviewers."
+msgstr "Totes les persones amb el rol de Revisor/a a la revista. Trieu un grup per llistar-ne els revisors."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesFiltered"
-msgstr "With the filters in use."
+msgstr "Amb els filtres actius."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratesHeading"
-msgstr "Indices of the listed reviewers in this journal"
+msgstr "Índexs dels revisors llistats en aquesta revista"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance"
-msgstr "Acceptance"
+msgstr "Acceptació de sol·licituds"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance.description"
-msgstr "Requests accepted out of the requests answered."
+msgstr "Sol·licituds acceptades d'entre les respostes."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime"
-msgstr "Reviews on time"
+msgstr "Informes a temps"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime.description"
-msgstr "Reviews completed by their due date, out of all completed reviews."
+msgstr "Informes lliurats dins del termini, d'entre totes les revisions completades."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays"
-msgstr "From request to review"
+msgstr "De la sol·licitud a l'informe"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays.description"
-msgstr "Average days from the request to the review, over all completed reviews."
+msgstr "Mitjana de dies entre la sol·licitud i l'informe, en totes les revisions completades."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress"
-msgstr "Reviews in progress"
+msgstr "Revisions en curs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress.description"
-msgstr "Submissions in review with the listed reviewers now."
+msgstr "Trameses en revisió amb els revisors llistats ara mateix."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent"
-msgstr "Reviews in the last 12 months"
+msgstr "Revisions en els darrers 12 mesos"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent.description"
-msgstr "Reviews the listed reviewers completed for the journal in the last 12 months."
+msgstr "Revisions que els revisors llistats han completat per a la revista en els darrers 12 mesos."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryHeading"
-msgstr "Situation"
+msgstr "Situació"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryDescription"
-msgstr "One situation per reviewer, the first that applies in this order, so the numbers add up. Choose one or more to list only their reviewers."
+msgstr "Una situació per revisor, la primera que correspongui en aquest ordre, perquè els números quadrin. Trieu-ne una o més per llistar només aquests revisors."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryClear"
-msgstr "Show every situation"
+msgstr "Mostra totes les situacions"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersShow"
-msgstr "Show filters"
+msgstr "Mostra els filtres"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersHide"
-msgstr "Hide filters"
+msgstr "Amaga els filtres"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeFilters"
-msgstr "Active filters"
+msgstr "Filtres actius"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.columnsReset"
-msgstr "Default columns"
+msgstr "Columnes per defecte"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.loadError"
-msgstr "The directory could not be loaded."
+msgstr "No s'ha pogut carregar el directori."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.retry"
-msgstr "Try again"
+msgstr "Torna-ho a provar"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.pageOf"
-msgstr "Page {$page} of {$lastPage}"
+msgstr "Pàgina {$page} de {$lastPage}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.percent"
-msgstr "{$percent}%"
+msgstr "{$percent} %"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.days"
-msgstr "{$days} days"
+msgstr "{$days} dies"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.monthsAgo"
-msgstr "{$months} months ago"
+msgstr "fa {$months} mesos"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.thisMonth"
-msgstr "this month"
+msgstr "aquest mes"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.none"
-msgstr "None"
+msgstr "Cap"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.openSubmission"
-msgstr "Open submission {$id} in a new tab"
+msgstr "Obre la tramesa {$id} en una pestanya nova"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.mailto"
-msgstr "Write to {$name}"
+msgstr "Escriu a {$name}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ojsNote"
-msgstr "As OJS shows it when choosing a reviewer: completed · declined · average days"
+msgstr "Tal com ho mostra OJS en triar un revisor/a: completades · rebutjades · mitjana de dies"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingOf"
-msgstr "Rated {$rating} out of 5"
+msgstr "Valoració de {$rating} sobre 5"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.reviewers"
-msgstr "Reviewers"
+msgstr "Revisors"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.countries"
-msgstr "Countries"
+msgstr "Països"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copy"
-msgstr "Copy the list for publishing"
+msgstr "Copia la llista per publicar-la"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copied"
-msgstr "Copied."
+msgstr "Copiat."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copyDescription"
-msgstr "One reviewer per line, in alphabetical order, with affiliation and country: ready to paste into the acknowledgement page or the issue."
+msgstr "Un revisor per línia, per ordre alfabètic, amb institució i país: a punt per enganxar a la pàgina d'agraïments o al número."

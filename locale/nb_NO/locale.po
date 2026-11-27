@@ -102,235 +102,235 @@ msgstr "Siste"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue"
-msgstr "Overdue"
+msgstr "Forsinket"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue.description"
-msgstr "Has a review whose response or review is past its due date."
+msgstr "Har en vurdering der svaret eller vurderingen har passert fristen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy"
-msgstr "Busy"
+msgstr "Opptatt"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy.description"
-msgstr "Three or more reviews in progress, none overdue."
+msgstr "Tre eller flere pågående vurderinger, ingen forsinket."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing"
-msgstr "Reviewing"
+msgstr "Vurderer"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing.description"
-msgstr "One or two reviews in progress, none overdue."
+msgstr "Én eller to pågående vurderinger, ingen forsinket."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent"
-msgstr "Available, active"
+msgstr "Tilgjengelig, aktiv"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent.description"
-msgstr "No review in progress; completed a review for the journal in the last 12 months."
+msgstr "Ingen pågående vurdering; fullførte en vurdering for tidsskriftet de siste 12 månedene."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle"
-msgstr "Available, idle"
+msgstr "Tilgjengelig, inaktiv"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle.description"
-msgstr "No review in progress; their last review for the journal is more than 12 months old."
+msgstr "Ingen pågående vurdering; siste vurdering for tidsskriftet er mer enn 12 måneder gammel."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new"
-msgstr "Never reviewed"
+msgstr "Aldri vurdert"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new.description"
-msgstr "Never completed a review for the journal and has none in progress."
+msgstr "Har aldri fullført en vurdering for tidsskriftet og har ingen pågående."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available"
-msgstr "Available now"
+msgstr "Tilgjengelige nå"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available.description"
-msgstr "No review in progress for the journal."
+msgstr "Ingen pågående vurdering for tidsskriftet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing"
-msgstr "Reviewing now"
+msgstr "Vurderer nå"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing.description"
-msgstr "At least one review in progress for the journal."
+msgstr "Minst én pågående vurdering for tidsskriftet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue"
-msgstr "With overdue reviews"
+msgstr "Med forsinkede vurderinger"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue.description"
-msgstr "A response or a review past its due date."
+msgstr "Et svar eller en vurdering som har passert fristen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent"
-msgstr "Reviewed in the last 12 months"
+msgstr "Vurdert de siste 12 månedene"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent.description"
-msgstr "Completed at least one review for the journal in the last 12 months."
+msgstr "Fullførte minst én vurdering for tidsskriftet de siste 12 månedene."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never"
-msgstr "Never reviewed for the journal"
+msgstr "Aldri vurdert for tidsskriftet"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never.description"
-msgstr "No review completed for the journal yet."
+msgstr "Ingen fullført vurdering for tidsskriftet ennå."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid"
-msgstr "Without ORCID"
+msgstr "Uten ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid.description"
-msgstr "No ORCID iD in the profile."
+msgstr "Ingen ORCID iD i profilen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.situation"
-msgstr "Situation"
+msgstr "Situasjon"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active"
-msgstr "In progress"
+msgstr "Pågående"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active.description"
-msgstr "Reviews in progress for the journal (requested and not yet completed, declined or cancelled), with their submissions."
+msgstr "Pågående vurderinger for tidsskriftet (forespurt og ennå ikke fullført, avslått eller avbrutt), med tilhørende innleveringer."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue"
-msgstr "Overdue"
+msgstr "Forsinket"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue.description"
-msgstr "Reviews in progress with the response or the review past its due date."
+msgstr "Pågående vurderinger der svaret eller vurderingen har passert fristen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed"
-msgstr "Completed"
+msgstr "Fullført"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed.description"
-msgstr "Reviews completed for this journal."
+msgstr "Fullførte vurderinger for dette tidsskriftet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent"
-msgstr "Last 12 months"
+msgstr "Siste 12 måneder"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent.description"
-msgstr "Reviews completed for this journal in the last 12 months."
+msgstr "Vurderinger fullført for dette tidsskriftet de siste 12 månedene."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests"
-msgstr "Requests"
+msgstr "Forespørsler"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests.description"
-msgstr "Review requests from this journal, cancelled ones left out."
+msgstr "Forespørsler om vurdering fra dette tidsskriftet, avbrutte ikke medregnet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance"
-msgstr "Acceptance"
+msgstr "Aksept"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance.description"
-msgstr "Requests accepted out of the requests answered, in this journal."
+msgstr "Aksepterte forespørsler av de besvarte forespørslene, i dette tidsskriftet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime"
-msgstr "On time"
+msgstr "I tide"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime.description"
-msgstr "Reviews completed by their due date, out of the reviews completed for this journal."
+msgstr "Vurderinger fullført innen fristen, av de fullførte vurderingene for dette tidsskriftet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays"
-msgstr "Average days"
+msgstr "Gjennomsnittlig antall dager"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays.description"
-msgstr "Average days from the request to the review, in this journal."
+msgstr "Gjennomsnittlig antall dager fra forespørsel til vurdering, i dette tidsskriftet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastCompleted.description"
-msgstr "Last review completed for this journal."
+msgstr "Siste fullførte vurdering for dette tidsskriftet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs"
-msgstr "In OJS: completed · declined · average"
+msgstr "I OJS: fullført · avslått · gjennomsnitt"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs.description"
-msgstr "The numbers OJS shows when an editor chooses a reviewer. Unless the site administrator turned the sharing off, they cover every journal of the site."
+msgstr "Tallene OJS viser når en redaktør velger en fagfelle. Med mindre nettstedsadministratoren har slått av delingen, omfatter de alle tidsskriftene på nettstedet."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.rating.description"
-msgstr "Average of the ratings editors gave the reviewer's reviews, as OJS shows it."
+msgstr "Gjennomsnittet av kvalitetsvurderingene redaktørene ga fagfellens vurderinger, slik OJS viser det."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastAssigned.description"
-msgstr "Last review request, as OJS shows it."
+msgstr "Siste forespørsel om vurdering, slik OJS viser den."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.activeSubmissions"
-msgstr "Submissions in review"
+msgstr "Innleveringer til vurdering"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsCompleted"
-msgstr "Completed (OJS)"
+msgstr "Fullført (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsDeclined"
-msgstr "Declined (OJS)"
+msgstr "Avslått (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsAverageDays"
-msgstr "Average days (OJS)"
+msgstr "Gjennomsnittlig antall dager (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.interest.description"
-msgstr "Reviewers with an interest that contains this text."
+msgstr "Fagfeller med en interesse som inneholder denne teksten."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.any"
-msgstr "Any"
+msgstr "Alle"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.with"
-msgstr "With ORCID"
+msgstr "Med ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.without"
-msgstr "Without ORCID"
+msgstr "Uten ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.verified"
-msgstr "Verified ORCID"
+msgstr "Verifisert ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.minCompleted"
-msgstr "At least this many reviews completed for the journal"
+msgstr "Minste antall fullførte vurderinger for tidsskriftet"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle"
-msgstr "Months without completing a review"
+msgstr "Måneder uten fullført vurdering"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle.description"
-msgstr "Reviewers whose last review for the journal is at least this old, or who never completed one."
+msgstr "Fagfeller der siste vurdering for tidsskriftet er minst så gammel, eller som aldri har fullført en."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.csv"
@@ -338,43 +338,43 @@ msgstr "CSV (Excel, LibreOffice)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.xlsx"
-msgstr "Excel workbook (XLSX)"
+msgstr "Excel-arbeidsbok (XLSX)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.filePrefix"
-msgstr "reviewers"
+msgstr "fagfeller"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.rosterFilePrefix"
-msgstr "reviewer roster"
+msgstr "fagfelleliste"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.firstLine"
-msgstr "{$context} — generated on {$date} by {$user} — {$filters}"
+msgstr "{$context} — generert {$date} av {$user} — {$filters}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rosterPeriod"
-msgstr "Reviews completed between {$from} and {$to}"
+msgstr "Vurderinger fullført mellom {$from} og {$to}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue.description"
-msgstr "Only the reviews of the articles of this issue."
+msgstr "Bare vurderingene av artiklene i denne utgaven."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.allReviewers"
-msgstr "All reviewers"
+msgstr "Alle fagfeller"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.totalCount"
-msgstr "Total: {$n}"
+msgstr "Totalt: {$n}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.generatedAt"
-msgstr "Generated on {$date}"
+msgstr "Generert {$date}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportTitle"
-msgstr "Export what is filtered"
+msgstr "Eksporter det som er filtrert"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportFormat"
@@ -382,103 +382,103 @@ msgstr "Format"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.download"
-msgstr "Download"
+msgstr "Last ned"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesHeading"
-msgstr "The reviewer pool"
+msgstr "Fagfellebasen"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesNote"
-msgstr "Everyone with the Reviewer role in the journal. Choose a group to list its reviewers."
+msgstr "Alle med rollen Fagfelle i tidsskriftet. Velg en gruppe for å liste opp fagfellene i den."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesFiltered"
-msgstr "With the filters in use."
+msgstr "Med filtrene som er i bruk."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratesHeading"
-msgstr "Indices of the listed reviewers in this journal"
+msgstr "Indikatorer for de listede fagfellene i dette tidsskriftet"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance"
-msgstr "Acceptance"
+msgstr "Aksept av forespørsler"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance.description"
-msgstr "Requests accepted out of the requests answered."
+msgstr "Aksepterte forespørsler av de besvarte forespørslene."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime"
-msgstr "Reviews on time"
+msgstr "Vurderinger i tide"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime.description"
-msgstr "Reviews completed by their due date, out of all completed reviews."
+msgstr "Vurderinger fullført innen fristen, av alle fullførte vurderinger."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays"
-msgstr "From request to review"
+msgstr "Fra forespørsel til vurdering"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays.description"
-msgstr "Average days from the request to the review, over all completed reviews."
+msgstr "Gjennomsnittlig antall dager fra forespørsel til vurdering, for alle fullførte vurderinger."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress"
-msgstr "Reviews in progress"
+msgstr "Pågående vurderinger"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress.description"
-msgstr "Submissions in review with the listed reviewers now."
+msgstr "Innleveringer som nå er til vurdering hos de listede fagfellene."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent"
-msgstr "Reviews in the last 12 months"
+msgstr "Vurderinger de siste 12 månedene"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent.description"
-msgstr "Reviews the listed reviewers completed for the journal in the last 12 months."
+msgstr "Vurderinger de listede fagfellene fullførte for tidsskriftet de siste 12 månedene."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryHeading"
-msgstr "Situation"
+msgstr "Situasjon"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryDescription"
-msgstr "One situation per reviewer, the first that applies in this order, so the numbers add up. Choose one or more to list only their reviewers."
+msgstr "Én situasjon per fagfelle, den første som gjelder i denne rekkefølgen, slik at tallene går opp. Velg én eller flere for å liste opp bare disse fagfellene."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryClear"
-msgstr "Show every situation"
+msgstr "Vis alle situasjoner"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersShow"
-msgstr "Show filters"
+msgstr "Vis filtre"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersHide"
-msgstr "Hide filters"
+msgstr "Skjul filtre"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeFilters"
-msgstr "Active filters"
+msgstr "Aktive filtre"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.columnsReset"
-msgstr "Default columns"
+msgstr "Standardkolonner"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.loadError"
-msgstr "The directory could not be loaded."
+msgstr "Katalogen kunne ikke lastes inn."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.retry"
-msgstr "Try again"
+msgstr "Prøv igjen"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.pageOf"
-msgstr "Page {$page} of {$lastPage}"
+msgstr "Side {$page} av {$lastPage}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.percent"
@@ -486,52 +486,52 @@ msgstr "{$percent}%"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.days"
-msgstr "{$days} days"
+msgstr "{$days} dager"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.monthsAgo"
-msgstr "{$months} months ago"
+msgstr "for {$months} måneder siden"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.thisMonth"
-msgstr "this month"
+msgstr "denne måneden"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.none"
-msgstr "None"
+msgstr "Ingen"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.openSubmission"
-msgstr "Open submission {$id} in a new tab"
+msgstr "Åpne innlevering {$id} i en ny fane"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.mailto"
-msgstr "Write to {$name}"
+msgstr "Skriv til {$name}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ojsNote"
-msgstr "As OJS shows it when choosing a reviewer: completed · declined · average days"
+msgstr "Slik OJS viser det når en fagfelle velges: fullført · avslått · gjennomsnittlig antall dager"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingOf"
-msgstr "Rated {$rating} out of 5"
+msgstr "Vurdert til {$rating} av 5"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.reviewers"
-msgstr "Reviewers"
+msgstr "Fagfeller"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.countries"
-msgstr "Countries"
+msgstr "Land"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copy"
-msgstr "Copy the list for publishing"
+msgstr "Kopier listen for publisering"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copied"
-msgstr "Copied."
+msgstr "Kopiert."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copyDescription"
-msgstr "One reviewer per line, in alphabetical order, with affiliation and country: ready to paste into the acknowledgement page or the issue."
+msgstr "Én fagfelle per linje, i alfabetisk rekkefølge, med tilknytning og land: klar til å limes inn på takkesiden eller i utgaven."

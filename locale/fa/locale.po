@@ -102,436 +102,436 @@ msgstr "آخر"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue"
-msgstr "Overdue"
+msgstr "دارای تأخیر"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue.description"
-msgstr "Has a review whose response or review is past its due date."
+msgstr "داوری‌ای دارد که مهلت پاسخ یا داوری آن گذشته است."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy"
-msgstr "Busy"
+msgstr "پرمشغله"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy.description"
-msgstr "Three or more reviews in progress, none overdue."
+msgstr "سه داوری یا بیشتر در جریان، بدون تأخیر."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing"
-msgstr "Reviewing"
+msgstr "در حال داوری"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing.description"
-msgstr "One or two reviews in progress, none overdue."
+msgstr "یک یا دو داوری در جریان، بدون تأخیر."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent"
-msgstr "Available, active"
+msgstr "در دسترس، فعال"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent.description"
-msgstr "No review in progress; completed a review for the journal in the last 12 months."
+msgstr "داوری در جریان ندارد؛ در ۱۲ ماه گذشته داوری‌ای برای نشریه تکمیل کرده است."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle"
-msgstr "Available, idle"
+msgstr "در دسترس، غیرفعال"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle.description"
-msgstr "No review in progress; their last review for the journal is more than 12 months old."
+msgstr "داوری در جریان ندارد؛ آخرین داوری او برای نشریه بیش از ۱۲ ماه پیش بوده است."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new"
-msgstr "Never reviewed"
+msgstr "هرگز داوری نکرده"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new.description"
-msgstr "Never completed a review for the journal and has none in progress."
+msgstr "هرگز داوری‌ای برای نشریه تکمیل نکرده و داوری در جریان هم ندارد."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available"
-msgstr "Available now"
+msgstr "اکنون در دسترس"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available.description"
-msgstr "No review in progress for the journal."
+msgstr "هیچ داوری در جریانی در نشریه ندارد."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing"
-msgstr "Reviewing now"
+msgstr "اکنون در حال داوری"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing.description"
-msgstr "At least one review in progress for the journal."
+msgstr "دست‌کم یک داوری در جریان در نشریه."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue"
-msgstr "With overdue reviews"
+msgstr "دارای داوری‌های با تأخیر"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue.description"
-msgstr "A response or a review past its due date."
+msgstr "پاسخ یا داوری‌ای که مهلت آن گذشته است."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent"
-msgstr "Reviewed in the last 12 months"
+msgstr "داوری در ۱۲ ماه گذشته"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent.description"
-msgstr "Completed at least one review for the journal in the last 12 months."
+msgstr "دست‌کم یک داوری برای نشریه در ۱۲ ماه گذشته تکمیل کرده‌اند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never"
-msgstr "Never reviewed for the journal"
+msgstr "هرگز برای نشریه داوری نکرده‌اند"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never.description"
-msgstr "No review completed for the journal yet."
+msgstr "تاکنون هیچ داوری‌ای برای نشریه تکمیل نکرده‌اند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid"
-msgstr "Without ORCID"
+msgstr "بدون ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid.description"
-msgstr "No ORCID iD in the profile."
+msgstr "در نمایه ORCID iD ثبت نشده است."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.situation"
-msgstr "Situation"
+msgstr "وضعیت"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active"
-msgstr "In progress"
+msgstr "در جریان"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active.description"
-msgstr "Reviews in progress for the journal (requested and not yet completed, declined or cancelled), with their submissions."
+msgstr "داوری‌های در جریان در نشریه (درخواست‌شده و هنوز تکمیل، رد یا لغو نشده)، همراه با ارسال‌های مربوط."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue"
-msgstr "Overdue"
+msgstr "با تأخیر"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue.description"
-msgstr "Reviews in progress with the response or the review past its due date."
+msgstr "داوری‌های در جریانی که مهلت پاسخ یا داوری آن‌ها گذشته است."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed"
-msgstr "Completed"
+msgstr "تکمیل‌شده"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed.description"
-msgstr "Reviews completed for this journal."
+msgstr "داوری‌های تکمیل‌شده برای این نشریه."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent"
-msgstr "Last 12 months"
+msgstr "۱۲ ماه گذشته"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent.description"
-msgstr "Reviews completed for this journal in the last 12 months."
+msgstr "داوری‌های تکمیل‌شده برای این نشریه در ۱۲ ماه گذشته."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests"
-msgstr "Requests"
+msgstr "درخواست‌ها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests.description"
-msgstr "Review requests from this journal, cancelled ones left out."
+msgstr "درخواست‌های داوری از این نشریه، بدون احتساب موارد لغوشده."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance"
-msgstr "Acceptance"
+msgstr "پذیرش"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance.description"
-msgstr "Requests accepted out of the requests answered, in this journal."
+msgstr "درخواست‌های پذیرفته‌شده از میان درخواست‌های پاسخ‌داده‌شده، در این نشریه."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime"
-msgstr "On time"
+msgstr "به‌موقع"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime.description"
-msgstr "Reviews completed by their due date, out of the reviews completed for this journal."
+msgstr "داوری‌های تکمیل‌شده تا پایان مهلت، از میان داوری‌های تکمیل‌شده برای این نشریه."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays"
-msgstr "Average days"
+msgstr "میانگین روزها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays.description"
-msgstr "Average days from the request to the review, in this journal."
+msgstr "میانگین روزها از درخواست تا داوری، در این نشریه."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastCompleted.description"
-msgstr "Last review completed for this journal."
+msgstr "آخرین داوری تکمیل‌شده برای این نشریه."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs"
-msgstr "In OJS: completed · declined · average"
+msgstr "در OJS: تکمیل‌شده · ردشده · میانگین"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs.description"
-msgstr "The numbers OJS shows when an editor chooses a reviewer. Unless the site administrator turned the sharing off, they cover every journal of the site."
+msgstr "اعدادی که OJS هنگام انتخاب داور به سردبیر نشان می‌دهد. مگر آنکه مدیر سایت اشتراک‌گذاری را غیرفعال کرده باشد، این اعداد همهٔ نشریه‌های سایت را در بر می‌گیرند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.rating.description"
-msgstr "Average of the ratings editors gave the reviewer's reviews, as OJS shows it."
+msgstr "میانگین امتیازهایی که سردبیران به داوری‌های داور داده‌اند، همان‌گونه که OJS نشان می‌دهد."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastAssigned.description"
-msgstr "Last review request, as OJS shows it."
+msgstr "آخرین درخواست داوری، همان‌گونه که OJS نشان می‌دهد."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.activeSubmissions"
-msgstr "Submissions in review"
+msgstr "ارسال‌های در حال داوری"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsCompleted"
-msgstr "Completed (OJS)"
+msgstr "تکمیل‌شده (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsDeclined"
-msgstr "Declined (OJS)"
+msgstr "ردشده (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsAverageDays"
-msgstr "Average days (OJS)"
+msgstr "میانگین روزها (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.interest.description"
-msgstr "Reviewers with an interest that contains this text."
+msgstr "داورانی که یکی از حوزه‌های علاقه‌شان این متن را دارد."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.any"
-msgstr "Any"
+msgstr "همه"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.with"
-msgstr "With ORCID"
+msgstr "دارای ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.without"
-msgstr "Without ORCID"
+msgstr "بدون ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.verified"
-msgstr "Verified ORCID"
+msgstr "ORCID تأییدشده"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.minCompleted"
-msgstr "At least this many reviews completed for the journal"
+msgstr "حداقل تعداد داوری‌های تکمیل‌شده برای نشریه"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle"
-msgstr "Months without completing a review"
+msgstr "ماه‌های بدون تکمیل داوری"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle.description"
-msgstr "Reviewers whose last review for the journal is at least this old, or who never completed one."
+msgstr "داورانی که آخرین داوری‌شان برای نشریه دست‌کم به این اندازه قدیمی است، یا هرگز داوری‌ای تکمیل نکرده‌اند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.csv"
-msgstr "CSV (Excel, LibreOffice)"
+msgstr "CSV (Excel، LibreOffice)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.xlsx"
-msgstr "Excel workbook (XLSX)"
+msgstr "کارپوشهٔ Excel (XLSX)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.filePrefix"
-msgstr "reviewers"
+msgstr "davaran"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.rosterFilePrefix"
-msgstr "reviewer roster"
+msgstr "fehrest-davaran"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.firstLine"
-msgstr "{$context} — generated on {$date} by {$user} — {$filters}"
+msgstr "{$context} — ساخته‌شده در {$date} توسط {$user} — {$filters}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rosterPeriod"
-msgstr "Reviews completed between {$from} and {$to}"
+msgstr "داوری‌های تکمیل‌شده بین {$from} و {$to}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue.description"
-msgstr "Only the reviews of the articles of this issue."
+msgstr "فقط داوری‌های مقاله‌های این شماره."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.allReviewers"
-msgstr "All reviewers"
+msgstr "همهٔ داوران"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.totalCount"
-msgstr "Total: {$n}"
+msgstr "مجموع: {$n}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.generatedAt"
-msgstr "Generated on {$date}"
+msgstr "ساخته‌شده در {$date}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportTitle"
-msgstr "Export what is filtered"
+msgstr "برون‌بری موارد صافی‌شده"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportFormat"
-msgstr "Format"
+msgstr "قالب"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.download"
-msgstr "Download"
+msgstr "دانلود"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesHeading"
-msgstr "The reviewer pool"
+msgstr "مجموعهٔ داوران"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesNote"
-msgstr "Everyone with the Reviewer role in the journal. Choose a group to list its reviewers."
+msgstr "همهٔ کسانی که در نشریه نقش داور دارند. یک گروه را برگزینید تا داوران آن فهرست شوند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesFiltered"
-msgstr "With the filters in use."
+msgstr "با صافی‌های فعال."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratesHeading"
-msgstr "Indices of the listed reviewers in this journal"
+msgstr "شاخص‌های داوران فهرست‌شده در این نشریه"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance"
-msgstr "Acceptance"
+msgstr "پذیرش درخواست‌ها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance.description"
-msgstr "Requests accepted out of the requests answered."
+msgstr "درخواست‌های پذیرفته‌شده از میان درخواست‌های پاسخ‌داده‌شده."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime"
-msgstr "Reviews on time"
+msgstr "داوری‌های به‌موقع"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime.description"
-msgstr "Reviews completed by their due date, out of all completed reviews."
+msgstr "داوری‌های تکمیل‌شده تا پایان مهلت، از میان همهٔ داوری‌های تکمیل‌شده."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays"
-msgstr "From request to review"
+msgstr "از درخواست تا داوری"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays.description"
-msgstr "Average days from the request to the review, over all completed reviews."
+msgstr "میانگین روزها از درخواست تا داوری، در همهٔ داوری‌های تکمیل‌شده."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress"
-msgstr "Reviews in progress"
+msgstr "داوری‌های در جریان"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress.description"
-msgstr "Submissions in review with the listed reviewers now."
+msgstr "ارسال‌هایی که اکنون نزد داوران فهرست‌شده در حال داوری‌اند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent"
-msgstr "Reviews in the last 12 months"
+msgstr "داوری‌ها در ۱۲ ماه گذشته"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent.description"
-msgstr "Reviews the listed reviewers completed for the journal in the last 12 months."
+msgstr "داوری‌هایی که داوران فهرست‌شده در ۱۲ ماه گذشته برای نشریه تکمیل کرده‌اند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryHeading"
-msgstr "Situation"
+msgstr "وضعیت"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryDescription"
-msgstr "One situation per reviewer, the first that applies in this order, so the numbers add up. Choose one or more to list only their reviewers."
+msgstr "برای هر داور یک وضعیت، یعنی نخستین وضعیتی که به این ترتیب صدق کند، تا جمع اعداد درست درآید. یک یا چند وضعیت را برگزینید تا فقط داوران آن‌ها فهرست شوند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryClear"
-msgstr "Show every situation"
+msgstr "نمایش همهٔ وضعیت‌ها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersShow"
-msgstr "Show filters"
+msgstr "نمایش صافی‌ها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersHide"
-msgstr "Hide filters"
+msgstr "پنهان کردن صافی‌ها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeFilters"
-msgstr "Active filters"
+msgstr "صافی‌های فعال"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.columnsReset"
-msgstr "Default columns"
+msgstr "ستون‌های پیش‌فرض"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.loadError"
-msgstr "The directory could not be loaded."
+msgstr "بارگذاری فهرست ممکن نشد."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.retry"
-msgstr "Try again"
+msgstr "تلاش دوباره"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.pageOf"
-msgstr "Page {$page} of {$lastPage}"
+msgstr "صفحهٔ {$page} از {$lastPage}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.percent"
-msgstr "{$percent}%"
+msgstr "{$percent}٪"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.days"
-msgstr "{$days} days"
+msgstr "{$days} روز"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.monthsAgo"
-msgstr "{$months} months ago"
+msgstr "{$months} ماه پیش"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.thisMonth"
-msgstr "this month"
+msgstr "این ماه"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.none"
-msgstr "None"
+msgstr "هیچ"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.openSubmission"
-msgstr "Open submission {$id} in a new tab"
+msgstr "باز کردن ارسال {$id} در زبانهٔ جدید"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.mailto"
-msgstr "Write to {$name}"
+msgstr "نوشتن به {$name}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ojsNote"
-msgstr "As OJS shows it when choosing a reviewer: completed · declined · average days"
+msgstr "همان‌گونه که OJS هنگام انتخاب داور نشان می‌دهد: تکمیل‌شده · ردشده · میانگین روزها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingOf"
-msgstr "Rated {$rating} out of 5"
+msgstr "امتیاز {$rating} از ۵"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.reviewers"
-msgstr "Reviewers"
+msgstr "داوران"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.countries"
-msgstr "Countries"
+msgstr "کشورها"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copy"
-msgstr "Copy the list for publishing"
+msgstr "کپی فهرست برای انتشار"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copied"
-msgstr "Copied."
+msgstr "کپی شد."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copyDescription"
-msgstr "One reviewer per line, in alphabetical order, with affiliation and country: ready to paste into the acknowledgement page or the issue."
+msgstr "هر داور در یک سطر، به ترتیب الفبایی، همراه با وابستگی و کشور: آمادهٔ چسباندن در صفحهٔ قدردانی یا در شماره."

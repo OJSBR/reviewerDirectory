@@ -102,235 +102,235 @@ msgstr "Ultima"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue"
-msgstr "Overdue"
+msgstr "Cu întârziere"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.overdue.description"
-msgstr "Has a review whose response or review is past its due date."
+msgstr "Are o recenzie cu răspunsul sau recenzia trecute de termen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy"
-msgstr "Busy"
+msgstr "Ocupați"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.busy.description"
-msgstr "Three or more reviews in progress, none overdue."
+msgstr "Trei sau mai multe recenzii în curs, niciuna întârziată."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing"
-msgstr "Reviewing"
+msgstr "În recenzare"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.reviewing.description"
-msgstr "One or two reviews in progress, none overdue."
+msgstr "Una sau două recenzii în curs, niciuna întârziată."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent"
-msgstr "Available, active"
+msgstr "Disponibili, activi"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.recent.description"
-msgstr "No review in progress; completed a review for the journal in the last 12 months."
+msgstr "Nicio recenzie în curs; au finalizat o recenzie pentru revistă în ultimele 12 luni."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle"
-msgstr "Available, idle"
+msgstr "Disponibili, inactivi"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.idle.description"
-msgstr "No review in progress; their last review for the journal is more than 12 months old."
+msgstr "Nicio recenzie în curs; ultima lor recenzie pentru revistă este mai veche de 12 luni."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new"
-msgstr "Never reviewed"
+msgstr "Nu au recenzat niciodată"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.situation.new.description"
-msgstr "Never completed a review for the journal and has none in progress."
+msgstr "Nu au finalizat niciodată o recenzie pentru revistă și nu au niciuna în curs."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available"
-msgstr "Available now"
+msgstr "Disponibili acum"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.available.description"
-msgstr "No review in progress for the journal."
+msgstr "Nicio recenzie în curs pentru revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing"
-msgstr "Reviewing now"
+msgstr "În recenzare acum"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.reviewing.description"
-msgstr "At least one review in progress for the journal."
+msgstr "Cel puțin o recenzie în curs pentru revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue"
-msgstr "With overdue reviews"
+msgstr "Cu recenzii întârziate"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.overdue.description"
-msgstr "A response or a review past its due date."
+msgstr "Un răspuns sau o recenzie trecute de termen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent"
-msgstr "Reviewed in the last 12 months"
+msgstr "Au recenzat în ultimele 12 luni"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.recent.description"
-msgstr "Completed at least one review for the journal in the last 12 months."
+msgstr "Au finalizat cel puțin o recenzie pentru revistă în ultimele 12 luni."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never"
-msgstr "Never reviewed for the journal"
+msgstr "Nu au recenzat niciodată pentru revistă"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.never.description"
-msgstr "No review completed for the journal yet."
+msgstr "Încă nicio recenzie finalizată pentru revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid"
-msgstr "Without ORCID"
+msgstr "Fără ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.group.withoutOrcid.description"
-msgstr "No ORCID iD in the profile."
+msgstr "Fără ID ORCID în profil."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.situation"
-msgstr "Situation"
+msgstr "Situație"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active"
-msgstr "In progress"
+msgstr "În curs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.active.description"
-msgstr "Reviews in progress for the journal (requested and not yet completed, declined or cancelled), with their submissions."
+msgstr "Recenzii în curs pentru revistă (solicitate și încă nefinalizate, nerefuzate și neanulate), cu manuscrisele lor."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue"
-msgstr "Overdue"
+msgstr "Întârziate"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.overdue.description"
-msgstr "Reviews in progress with the response or the review past its due date."
+msgstr "Recenzii în curs cu răspunsul sau recenzia trecute de termen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed"
-msgstr "Completed"
+msgstr "Finalizate"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.completed.description"
-msgstr "Reviews completed for this journal."
+msgstr "Recenzii finalizate pentru această revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent"
-msgstr "Last 12 months"
+msgstr "Ultimele 12 luni"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.recent.description"
-msgstr "Reviews completed for this journal in the last 12 months."
+msgstr "Recenzii finalizate pentru această revistă în ultimele 12 luni."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests"
-msgstr "Requests"
+msgstr "Cereri"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.requests.description"
-msgstr "Review requests from this journal, cancelled ones left out."
+msgstr "Cereri de recenzie de la această revistă, fără cele anulate."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance"
-msgstr "Acceptance"
+msgstr "Acceptare"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.acceptance.description"
-msgstr "Requests accepted out of the requests answered, in this journal."
+msgstr "Cereri acceptate din cererile la care s-a răspuns, în această revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime"
-msgstr "On time"
+msgstr "La timp"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.onTime.description"
-msgstr "Reviews completed by their due date, out of the reviews completed for this journal."
+msgstr "Recenzii finalizate până la termen, din recenziile finalizate pentru această revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays"
-msgstr "Average days"
+msgstr "Număr mediu de zile"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.averageDays.description"
-msgstr "Average days from the request to the review, in this journal."
+msgstr "Numărul mediu de zile de la cerere la recenzie, în această revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastCompleted.description"
-msgstr "Last review completed for this journal."
+msgstr "Ultima recenzie finalizată pentru această revistă."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs"
-msgstr "In OJS: completed · declined · average"
+msgstr "În OJS: finalizate · refuzate · medie"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojs.description"
-msgstr "The numbers OJS shows when an editor chooses a reviewer. Unless the site administrator turned the sharing off, they cover every journal of the site."
+msgstr "Cifrele pe care OJS le afișează când un editor alege un recenzent. Dacă administratorul site-ului nu a dezactivat partajarea, ele cuprind toate revistele site-ului."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.rating.description"
-msgstr "Average of the ratings editors gave the reviewer's reviews, as OJS shows it."
+msgstr "Media evaluărilor date de editori recenziilor recenzentului, așa cum o afișează OJS."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.lastAssigned.description"
-msgstr "Last review request, as OJS shows it."
+msgstr "Ultima cerere de recenzie, așa cum o afișează OJS."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.activeSubmissions"
-msgstr "Submissions in review"
+msgstr "Manuscrise în recenzare"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsCompleted"
-msgstr "Completed (OJS)"
+msgstr "Finalizate (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsDeclined"
-msgstr "Declined (OJS)"
+msgstr "Refuzate (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.column.ojsAverageDays"
-msgstr "Average days (OJS)"
+msgstr "Număr mediu de zile (OJS)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.interest.description"
-msgstr "Reviewers with an interest that contains this text."
+msgstr "Recenzenți cu un interes care conține acest text."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.any"
-msgstr "Any"
+msgstr "Oricare"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.with"
-msgstr "With ORCID"
+msgstr "Cu ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.without"
-msgstr "Without ORCID"
+msgstr "Fără ORCID"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.orcid.verified"
-msgstr "Verified ORCID"
+msgstr "ORCID verificat"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.minCompleted"
-msgstr "At least this many reviews completed for the journal"
+msgstr "Număr minim de recenzii finalizate pentru revistă"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle"
-msgstr "Months without completing a review"
+msgstr "Luni fără o recenzie finalizată"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filter.monthsIdle.description"
-msgstr "Reviewers whose last review for the journal is at least this old, or who never completed one."
+msgstr "Recenzenți a căror ultimă recenzie pentru revistă are cel puțin această vechime sau care nu au finalizat niciodată una."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.csv"
@@ -338,31 +338,31 @@ msgstr "CSV (Excel, LibreOffice)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.xlsx"
-msgstr "Excel workbook (XLSX)"
+msgstr "Registru de lucru Excel (XLSX)"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.filePrefix"
-msgstr "reviewers"
+msgstr "recenzenti"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.rosterFilePrefix"
-msgstr "reviewer roster"
+msgstr "lista-recenzenti"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.export.firstLine"
-msgstr "{$context} — generated on {$date} by {$user} — {$filters}"
+msgstr "{$context} — generat la {$date} de {$user} — {$filters}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rosterPeriod"
-msgstr "Reviews completed between {$from} and {$to}"
+msgstr "Recenzii finalizate între {$from} și {$to}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.issue.description"
-msgstr "Only the reviews of the articles of this issue."
+msgstr "Doar recenziile articolelor din acest număr."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.allReviewers"
-msgstr "All reviewers"
+msgstr "Toți recenzenții"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.totalCount"
@@ -370,11 +370,11 @@ msgstr "Total: {$n}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.generatedAt"
-msgstr "Generated on {$date}"
+msgstr "Generat la {$date}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportTitle"
-msgstr "Export what is filtered"
+msgstr "Exportă ce este filtrat"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.exportFormat"
@@ -382,103 +382,103 @@ msgstr "Format"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.download"
-msgstr "Download"
+msgstr "Descarcă"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesHeading"
-msgstr "The reviewer pool"
+msgstr "Echipa de recenzenți"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesNote"
-msgstr "Everyone with the Reviewer role in the journal. Choose a group to list its reviewers."
+msgstr "Toate persoanele cu rolul de recenzent în revistă. Alegeți un grup pentru a-i lista recenzenții."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.indicesFiltered"
-msgstr "With the filters in use."
+msgstr "Cu filtrele aplicate."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratesHeading"
-msgstr "Indices of the listed reviewers in this journal"
+msgstr "Indicii recenzenților listați în această revistă"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance"
-msgstr "Acceptance"
+msgstr "Acceptarea cererilor"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.acceptance.description"
-msgstr "Requests accepted out of the requests answered."
+msgstr "Cereri acceptate din cererile la care s-a răspuns."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime"
-msgstr "Reviews on time"
+msgstr "Recenzii la timp"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.onTime.description"
-msgstr "Reviews completed by their due date, out of all completed reviews."
+msgstr "Recenzii finalizate până la termen, din toate recenziile finalizate."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays"
-msgstr "From request to review"
+msgstr "De la cerere la recenzie"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.averageDays.description"
-msgstr "Average days from the request to the review, over all completed reviews."
+msgstr "Numărul mediu de zile de la cerere la recenzie, pentru toate recenziile finalizate."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress"
-msgstr "Reviews in progress"
+msgstr "Recenzii în curs"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress.description"
-msgstr "Submissions in review with the listed reviewers now."
+msgstr "Manuscrise aflate acum în recenzare la recenzenții listați."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent"
-msgstr "Reviews in the last 12 months"
+msgstr "Recenzii în ultimele 12 luni"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent.description"
-msgstr "Reviews the listed reviewers completed for the journal in the last 12 months."
+msgstr "Recenzii finalizate de recenzenții listați pentru revistă în ultimele 12 luni."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryHeading"
-msgstr "Situation"
+msgstr "Situație"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryDescription"
-msgstr "One situation per reviewer, the first that applies in this order, so the numbers add up. Choose one or more to list only their reviewers."
+msgstr "O singură situație per recenzent, prima care se aplică în această ordine, astfel încât cifrele să se adune. Alegeți una sau mai multe pentru a lista doar acei recenzenți."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.summaryClear"
-msgstr "Show every situation"
+msgstr "Afișează toate situațiile"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersShow"
-msgstr "Show filters"
+msgstr "Afișează filtrele"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.filtersHide"
-msgstr "Hide filters"
+msgstr "Ascunde filtrele"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.activeFilters"
-msgstr "Active filters"
+msgstr "Filtre active"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.columnsReset"
-msgstr "Default columns"
+msgstr "Coloane implicite"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.loadError"
-msgstr "The directory could not be loaded."
+msgstr "Directorul nu a putut fi încărcat."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.retry"
-msgstr "Try again"
+msgstr "Încercați din nou"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.pageOf"
-msgstr "Page {$page} of {$lastPage}"
+msgstr "Pagina {$page} din {$lastPage}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.percent"
@@ -486,52 +486,52 @@ msgstr "{$percent}%"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.days"
-msgstr "{$days} days"
+msgstr "{$days} zile"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.monthsAgo"
-msgstr "{$months} months ago"
+msgstr "acum {$months} luni"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.thisMonth"
-msgstr "this month"
+msgstr "luna aceasta"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.none"
-msgstr "None"
+msgstr "Niciuna"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.openSubmission"
-msgstr "Open submission {$id} in a new tab"
+msgstr "Deschide manuscrisul {$id} într-o filă nouă"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.mailto"
-msgstr "Write to {$name}"
+msgstr "Trimite un e-mail către {$name}"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ojsNote"
-msgstr "As OJS shows it when choosing a reviewer: completed · declined · average days"
+msgstr "Așa cum le afișează OJS la alegerea unui recenzent: finalizate · refuzate · număr mediu de zile"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.ratingOf"
-msgstr "Rated {$rating} out of 5"
+msgstr "Evaluare {$rating} din 5"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.reviewers"
-msgstr "Reviewers"
+msgstr "Recenzenți"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.countries"
-msgstr "Countries"
+msgstr "Țări"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copy"
-msgstr "Copy the list for publishing"
+msgstr "Copiază lista pentru publicare"
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copied"
-msgstr "Copied."
+msgstr "Copiat."
 
 #, fuzzy
 msgid "plugins.generic.reviewerDirectory.roster.copyDescription"
-msgstr "One reviewer per line, in alphabetical order, with affiliation and country: ready to paste into the acknowledgement page or the issue."
+msgstr "Un recenzent pe rând, în ordine alfabetică, cu afiliere și țară: gata de lipit în pagina de mulțumiri sau în număr."

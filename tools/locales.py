@@ -1,7 +1,9 @@
 # Rewrites locale/<code>/locale.po: keeps the translations of the keys still in use, drops
 # the keys no longer used, and adds the new ones (en, pt_BR, es and pt reviewed; the other
-# locales get the English text marked fuzzy until a speaker reviews them).
+# locales get the text of tools/translations/<code>.json marked fuzzy until a speaker reviews
+# it — OJS shows fuzzy entries as any other).
 # Usage: python3 tools/locales.py
+import json
 import os
 import re
 
@@ -144,6 +146,12 @@ def parse(path):
 for code in sorted(os.listdir(BASE)):
     path = os.path.join(BASE, code, 'locale.po')
     header, entries = parse(path)
+    translated = {}
+    if code not in REVIEWED:
+        translated = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'translations', code + '.json'), encoding='utf-8'))
+        for row in NEW:
+            found = sorted(re.findall(r'\{\$\w+\}', translated[row[0]]))
+            assert translated[row[0]].strip() and found == sorted(re.findall(r'\{\$\w+\}', row[1])), code + ': ' + row[0]
     out = header.rstrip('\n') + '\n\n'
     for key in KEEP:
         value, fuzzy = entries[key]
@@ -153,6 +161,6 @@ for code in sorted(os.listdir(BASE)):
         if code in REVIEWED:
             out += '\nmsgid ' + q(P + key) + '\nmsgstr ' + q(row[1 + REVIEWED[code]]) + '\n'
         else:
-            out += '\n#, fuzzy\nmsgid ' + q(P + key) + '\nmsgstr ' + q(row[1]) + '\n'
+            out += '\n#, fuzzy\nmsgid ' + q(P + key) + '\nmsgstr ' + q(translated[key]) + '\n'
     open(path, 'w', encoding='utf-8').write(out)
 print(len(KEEP), 'kept,', len(NEW), 'new,', len(os.listdir(BASE)), 'locales')
