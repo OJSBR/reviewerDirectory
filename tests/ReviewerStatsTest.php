@@ -149,6 +149,8 @@ class ReviewerStatsTest extends PKPTestCase
     public function testTheRosterListsWhoCompletedReviewsInThePeriod(): void
     {
         foreach ($this->contexts() as $context) {
+            // The roster runs on a page request: affiliations are localized from it.
+            $this->request($context);
             $roster = (new Roster($context))->get('2000-01-01', date('Y-m-d'), 0);
             $expected = DB::table('review_assignments AS ra')
                 ->join('submissions AS s', 's.submission_id', '=', 'ra.submission_id')
