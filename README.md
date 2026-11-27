@@ -71,6 +71,11 @@ OJS and OMP; the roster filter by issue is shown only in OJS (a press has no iss
   requests, acceptance, on time, average days, last completion. The tiles, the indices and the
   situations come from these.
 
+A review is **in progress** as OJS sees it when it sends the reminders: notified, neither completed nor
+declined nor cancelled, in the last round of the stage the submission is in, and the submission still
+in the workflow. A review left open on a submission that was later published or declined does not
+count. It is **overdue** when the response or the review was due before today ended (the core's rule).
+
 ## Installation
 
 Upload the package in **Settings → Website → Plugins → Upload A New Plugin**, or extract the folder
@@ -206,6 +211,11 @@ o filtro da nominata por edição aparece só no OJS (editora não tem edições
   administrador do site tenha desligado o compartilhamento, somam todas as revistas do site.
 - **Só desta revista ou editora** — em andamento, atrasadas, concluídas, últimos 12 meses, convites,
   aceite, no prazo, média de dias, última conclusão. Os quadros, os índices e as situações vêm daqui.
+
+Uma avaliação está **em andamento** do jeito que o OJS a vê ao mandar os lembretes: convite enviado,
+sem conclusão, recusa ou cancelamento, na última rodada da etapa em que a submissão está, e a
+submissão ainda no fluxo. Avaliação esquecida aberta numa submissão depois publicada ou rejeitada não
+conta. Está **atrasada** quando a resposta ou o parecer venciam até hoje (regra do núcleo).
 
 ### Instalação
 

@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
 use PKP\core\PKPRequest;
 use PKP\security\Role;
+use PKP\submission\PKPSubmission;
 
 class ReviewerStats
 {
@@ -78,7 +79,7 @@ class ReviewerStats
 
         $interests = $ids ? Repo::user()->preloadInterests($ids) : [];
         $journal = $this->getJournalStatistics($ids);
-        $active = $this->getActiveSubmissions($ids);
+        [$active, $overdue] = $this->getOpenAssignments($ids);
         $countries = $this->getCountryNames(array_map(fn ($user) => (string) $user->getCountry(), $users));
 
         $reviewers = [];
@@ -118,7 +119,7 @@ class ReviewerStats
                 'requests' => (int) ($stats['requests'] ?? 0),
                 'active' => count($activeSubmissions),
                 'activeSubmissions' => $activeSubmissions,
-                'overdue' => (int) ($stats['overdue'] ?? 0),
+                'overdue' => $overdue[$id] ?? 0,
                 'completed' => $completed,
                 'declined' => (int) ($stats['declined'] ?? 0),
                 'acceptance' => $responded ? (int) round(100 * (int) $stats['accepted'] / $responded) : null,
@@ -237,10 +238,7 @@ class ReviewerStats
         if (!$reviewerIds) {
             return [];
         }
-        $today = date('Y-m-d');
         $recentFrom = date('Y-m-d', strtotime('-' . self::RECENT_MONTHS . ' months'));
-        $active = 'ra.date_notified IS NOT NULL AND ra.date_completed IS NULL AND ra.declined = 0';
-
         $stats = [];
         foreach (array_chunk($reviewerIds, 1000) as $chunk) {
             $rows = $this->assignments()
@@ -248,7 +246,6 @@ class ReviewerStats
                 ->groupBy('ra.reviewer_id')
                 ->select('ra.reviewer_id')
                 ->selectRaw('COUNT(*) AS requests')
-                ->selectRaw('SUM(CASE WHEN ' . $active . ' AND ((ra.date_confirmed IS NULL AND ra.date_response_due IS NOT NULL AND ' . $this->dateOnly('ra.date_response_due') . ' < ?) OR (ra.date_due IS NOT NULL AND ' . $this->dateOnly('ra.date_due') . ' < ?)) THEN 1 ELSE 0 END) AS overdue', [$today, $today])
                 ->selectRaw('SUM(CASE WHEN ra.declined = 0 AND ra.date_confirmed IS NOT NULL THEN 1 ELSE 0 END) AS accepted')
                 ->selectRaw('SUM(CASE WHEN ra.declined = 1 THEN 1 ELSE 0 END) AS declined')
                 ->selectRaw('SUM(CASE WHEN ra.declined = 0 AND ra.date_completed IS NOT NULL THEN 1 ELSE 0 END) AS completed')
@@ -260,7 +257,6 @@ class ReviewerStats
             foreach ($rows as $row) {
                 $stats[(int) $row->reviewer_id] = [
                     'requests' => (int) $row->requests,
-                    'overdue' => (int) $row->overdue,
                     'accepted' => (int) $row->accepted,
                     'declined' => (int) $row->declined,
                     'completed' => (int) $row->completed,
@@ -275,18 +271,24 @@ class ReviewerStats
     }
 
     /**
-     * The submissions each reviewer has a review in progress for: notified, and not
-     * completed, declined or cancelled. One entry per submission, whatever the rounds.
+     * The reviews in progress of each reviewer, as OJS sees them when it sends the
+     * reminders: the core's incomplete assignments (notified, neither completed, declined
+     * nor cancelled, in the last round of the stage the submission is in) of submissions
+     * still in the workflow. An assignment left open on a submission that was published
+     * or declined is not a review in progress.
      *
      * @param int[] $reviewerIds
      *
-     * @return array<int,array<int,array{id:int,url:string}>>
+     * @return array{0:array<int,array<array{id:int,url:string}>>,1:array<int,int>} The
+     *         submissions in review with each reviewer, and how many of the reviews are
+     *         overdue (the core's rule: the response or the review was due before tomorrow).
      */
-    protected function getActiveSubmissions(array $reviewerIds): array
+    protected function getOpenAssignments(array $reviewerIds): array
     {
         if (!$reviewerIds) {
-            return [];
+            return [[], []];
         }
+        $wanted = array_flip($reviewerIds);
         $url = $this->request->getDispatcher()->url(
             $this->request,
             Application::ROUTE_PAGE,
@@ -296,24 +298,37 @@ class ReviewerStats
             null,
             ['workflowSubmissionId' => '__SUBMISSION_ID__']
         );
-        $map = [];
-        foreach (array_chunk($reviewerIds, 1000) as $chunk) {
-            $rows = $this->assignments()
-                ->whereIn('ra.reviewer_id', $chunk)
-                ->whereNotNull('ra.date_notified')
-                ->whereNull('ra.date_completed')
-                ->where('ra.declined', 0)
-                ->orderBy('ra.submission_id')
-                ->get(['ra.reviewer_id', 'ra.submission_id']);
-            foreach ($rows as $row) {
-                $submissionId = (int) $row->submission_id;
-                $map[(int) $row->reviewer_id][$submissionId] = [
-                    'id' => $submissionId,
-                    'url' => str_replace('__SUBMISSION_ID__', (string) $submissionId, $url),
-                ];
+        $tomorrow = date('Y-m-d 00:00:00', strtotime('tomorrow'));
+        $rows = Repo::reviewAssignment()->getCollector()
+            ->filterByContextIds([$this->context->getId()])
+            ->filterByIsIncomplete(true)
+            ->getQueryBuilder()
+            ->whereIn(
+                'ra.submission_id',
+                fn (Builder $q) => $q->select('sq.submission_id')
+                    ->from('submissions AS sq')
+                    ->where('sq.context_id', $this->context->getId())
+                    ->where('sq.status', PKPSubmission::STATUS_QUEUED)
+            )
+            ->orderBy('ra.submission_id')
+            ->get(['ra.reviewer_id', 'ra.submission_id', 'ra.date_due', 'ra.date_response_due', 'ra.date_confirmed']);
+
+        $active = $overdue = [];
+        foreach ($rows as $row) {
+            $reviewerId = (int) $row->reviewer_id;
+            if (!isset($wanted[$reviewerId])) {
+                continue;
             }
+            $submissionId = (int) $row->submission_id;
+            $active[$reviewerId][$submissionId] = [
+                'id' => $submissionId,
+                'url' => str_replace('__SUBMISSION_ID__', (string) $submissionId, $url),
+            ];
+            $late = ($row->date_due !== null && $row->date_due < $tomorrow)
+                || ($row->date_confirmed === null && $row->date_response_due !== null && $row->date_response_due < $tomorrow);
+            $overdue[$reviewerId] = ($overdue[$reviewerId] ?? 0) + (int) $late;
         }
-        return array_map('array_values', $map);
+        return [array_map('array_values', $active), $overdue];
     }
 
     /**

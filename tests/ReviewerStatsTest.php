@@ -28,6 +28,7 @@ use PKP\core\Dispatcher;
 use PKP\core\PKPRequest;
 use PKP\core\Registry;
 use PKP\security\Role;
+use PKP\submission\PKPSubmission;
 use PKP\tests\PKPTestCase;
 
 #[CoversClass(ReviewerStats::class)]
@@ -117,9 +118,20 @@ class ReviewerStatsTest extends PKPTestCase
                 $this->assertSame($mine()->count(), $r['requests'], "requests {$id}");
                 $this->assertSame($mine()->where('ra.declined', 0)->whereNotNull('ra.date_completed')->count(), $r['completed'], "completed {$id}");
                 $this->assertSame($mine()->where('ra.declined', 1)->count(), $r['declined'], "declined {$id}");
-                $active = $mine()->where('ra.declined', 0)->whereNotNull('ra.date_notified')->whereNull('ra.date_completed')->distinct()->pluck('ra.submission_id')->map(intval(...))->sort()->values()->all();
+                // In progress: the last round of the stage the submission is in, submission still in the workflow.
+                $open = fn () => $mine()->where('ra.declined', 0)->whereNotNull('ra.date_notified')->whereNull('ra.date_completed')
+                    ->where('s.status', PKPSubmission::STATUS_QUEUED)
+                    ->whereColumn('s.stage_id', 'ra.stage_id')
+                    ->whereRaw('ra.round = (SELECT MAX(rr.round) FROM review_rounds rr WHERE rr.submission_id = ra.submission_id AND rr.stage_id = ra.stage_id)');
+                $active = $open()->distinct()->pluck('ra.submission_id')->map(intval(...))->sort()->values()->all();
                 $this->assertSame($active, array_column($r['activeSubmissions'], 'id'), "active {$id}");
                 $this->assertSame(count($active), $r['active']);
+                $tomorrow = date('Y-m-d 00:00:00', strtotime('tomorrow'));
+                $this->assertSame(
+                    $open()->where(fn ($q) => $q->where('ra.date_due', '<', $tomorrow)->orWhere(fn ($q) => $q->whereNull('ra.date_confirmed')->where('ra.date_response_due', '<', $tomorrow)))->count(),
+                    $r['overdue'],
+                    "overdue {$id}"
+                );
                 $this->assertSame(
                     substr((string) $mine()->where('ra.declined', 0)->max('ra.date_completed'), 0, 10),
                     $r['lastCompleted'],
