@@ -2,115 +2,139 @@
 
 [![OJS](https://img.shields.io/badge/OJS-3.5-brightgreen)](https://pkp.sfu.ca/ojs/)
 [![OMP](https://img.shields.io/badge/OMP-3.5-brightgreen)](https://pkp.sfu.ca/omp/)
-[![Version](https://img.shields.io/badge/version-5.0.0.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-5.0.1.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/5.0.0.0/reviewerDirectory-5.0.0.0.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/5.0.1.0/reviewerDirectory-5.0.1.0.tar.gz) — or browse all [Releases](../../releases).
 
-A generic plugin for **Open Journal Systems (OJS)** and **Open Monograph Press (OMP)** that
-adds an **internal, editor-only directory of reviewers** — pulling the accounts that already
-hold the *Reviewer* role in the journal or press, with their profiles and review statistics —
-plus a **reviewer roster (nominata)** for a period (and, in OJS, for an issue), ready to
-publish as an acknowledgement.
+> **Built on the work of others.** The reviewer statistics are the ones OJS and OMP show when an
+> editor chooses a reviewer — the reviewer selection panel of the
+> [Public Knowledge Project](https://pkp.sfu.ca), from the same core query
+> (`Repo::user()->getCollector()->includeReviewerData()`). The page is made of PKP's own
+> components and follows the layout of OJSBR's
+> [Submission Queue Report](https://github.com/OJSBR/ojsbrSubmissionQueueReport), its sibling
+> plugin. See [Credits](#credits--authorship).
 
-> **Developed and maintained by [OJSBR](https://ojsbr.com).** See the
-> [Credits & authorship](#credits--authorship) section below.
+A generic plugin for **Open Journal Systems (OJS)** and **Open Monograph Press (OMP)** that gives
+editors an **internal directory of the reviewer pool** — every account with the *Reviewer* role,
+with profile, indices, a summary of their situation, filters and an export — plus the
+**reviewer roster (nominata)** of a period or issue, ready to publish as an acknowledgement.
+
+> **Developed and maintained by [OJSBR](https://ojsbr.com).**
 
 ## Compatibility & branches
 
 | Application | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 5.0.0.0 |
+| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 5.0.1.0 |
 
-> Since 1.0.2.0 the same package serves OJS and OMP. The former `reviewerDirectoryOmp`
-> repository is archived; its releases stay available there. The roster filter by issue is
-> shown only in OJS: a press has no issues, and there the roster is filtered by date.
+The first number of the version names the application line (5 = 3.5). The same package serves
+OJS and OMP; the roster filter by issue is shown only in OJS (a press has no issues).
 
-## What it does
+## What the editor gets
 
-- **Reviewer directory** — a backend page, restricted to **Managers, Section Editors and
-  Administrators**, listing every user with the *Reviewer* role in the current journal.
-- **One-click shortcut in the dashboard menu** — once enabled, the plugin appends a
-  **Reviewer Directory** entry to the end of the editorial sidebar menu, so editors reach the
-  page directly instead of going through the plugins screen. It is shown only to the roles the
-  page itself authorises (Managers, Section Editors and Administrators).
-- **Profile + review data per reviewer** — name, affiliation, country, review interests, ORCID
-  (with a verified badge), plus statistics: reviews completed, in progress, declined, average
-  days to complete, quality rating, last assignment date and **last completion date**.
-- **Active reviews with submission IDs** — the *Active* column lists the submissions currently
-  under review by each reviewer, each linking straight to its editorial workflow.
-- **Instant search** across name, affiliation, country, interest, e-mail, username and active
-  submission IDs, plus an **"only with ORCID"** filter.
-- **Configurable columns** — a checkbox bar toggles columns on/off; the choice is remembered
-  per browser. Affiliation, country, ORCID, username and e-mail are hidden by default.
-- **Sort** by any column (numeric or text).
-- **Export to Excel** — one click exports exactly what is filtered/visible to a UTF-8 CSV that
-  Excel opens natively.
-- **Reviewer roster (nominata)** — pick a **date range** (review completion date) and/or an
-  **issue**, and get the reviewers who completed reviews within that scope, with a count and
-  the submissions they reviewed — its own Excel export included.
+**Reviewer Directory** in the side menu, for **managers, section editors and administrators**:
+
+- **The reviewer pool** — tiles with the number of reviewers in each group: all, *available now*
+  (no review in progress), *reviewing now*, *with overdue reviews*, *reviewed in the last 12 months*,
+  *never reviewed for the journal*, *without ORCID*. A click lists the group.
+- **Indices of the listed reviewers in this journal** — acceptance of review requests, reviews
+  delivered on time, average days from request to review, reviews in progress and reviews in the
+  last 12 months. They follow the filters, so they describe the group on the screen.
+- **Situation** — one per reviewer, the first that applies: *overdue*, *busy* (3 or more reviews in
+  progress), *reviewing*, *available and active* (reviewed in the last 12 months), *available and
+  idle*, *never reviewed*. A coloured bar and a legend show how many are in each one and **add up
+  to the total**; a click lists only those reviewers.
+- **Filters** — situation, country, interest, ORCID (any, with, without, verified), minimum reviews
+  completed for the journal, months without completing a review, minimum rating, and a search by
+  name, e-mail, username, affiliation, country, interest, ORCID or submission number (`#123`).
+  Everything lives in the address of the page, so a filtered directory can be shared as a link.
+- **Table** — 50 per page, sortable, with the columns each editor chooses (remembered in the
+  browser): name and e-mail, affiliation, country, ORCID (verified mark), username, interests,
+  situation, reviews in progress with links to their submissions, overdue, completed, last 12
+  months, requests, acceptance and on-time bars, average days, last completion (highlighted after
+  24 months), the numbers OJS shows when choosing a reviewer, rating and last assignment. Personal
+  data is hidden until the editor shows it.
+- **Export** — CSV for Excel (UTF-8 with BOM, `;`) or an Excel workbook (XLSX, frozen header with
+  filter buttons), with exactly the reviewers filtered; the first line says which journal, when, by
+  whom and with which filters.
+- **Roster (nominata)** — a period of review completion and, in OJS, an issue: tiles with reviewers,
+  reviews, submissions and countries; the table; the export; and **the list ready to publish**, one
+  reviewer per line in alphabetical order with affiliation and country, copied with one click.
+
+### Two families of numbers
+
+- **As OJS/OMP shows them** when an editor chooses a reviewer — completed, declined, average days,
+  rating, last assignment — taken from the same core query, so they are the numbers of that screen.
+  Unless the site administrator turned the sharing off, they cover every journal of the site.
+- **Of this journal or press only** — reviews in progress, overdue, completed, last 12 months,
+  requests, acceptance, on time, average days, last completion. The tiles, the indices and the
+  situations come from these.
 
 ## Installation
 
-1. Download the release (or clone the matching branch).
-2. Install via **Settings → Website → Plugins → Upload A New Plugin**, or extract the folder
-   into `plugins/generic/` so you get `plugins/generic/reviewerDirectory/`.
-3. Enable **Reviewer Directory** under the *Generic* plugins list.
-4. Open it via the **"Open directory"** action on the plugins list, or go to
-   `/<journal>/reviewerdirectory`.
+Upload the package in **Settings → Website → Plugins → Upload A New Plugin**, or extract the folder
+into `plugins/generic/` (giving `plugins/generic/reviewerDirectory/`). Then enable **Reviewer
+Directory** in the *Generic* plugins list. It opens from the side menu, from the *Open directory*
+action of the plugins list, or at `/<journal>/reviewerdirectory`. Links to the former page keep
+working.
 
 ## How it works (technical)
 
-- Reviewers come straight from OJS accounts via `Repo::user()->getCollector()` with
-  `includeReviewerData()` (statistics in a single query) and `preloadInterests()` (interests
-  batched). Nothing is duplicated or stored by the plugin.
-- Active submissions, last completion date and the roster start from the core collectors
-  (`Repo::reviewAssignment()->getCollector()` scoped to the journal, and
-  `Repo::publication()->getCollector()` for an issue), with the plugin's own conditions added:
-  an active review is notified and not completed, declined or cancelled.
-- The page renders inside the OJS backend (Vue) using a `v-pre` wrapper so server-rendered
-  content is untouched; search, column toggles, sorting and export are in
-  `js/reviewerDirectory.js` and the styles in `css/reviewerDirectory.css`, both added to backend
-  pages only. Access is enforced by `ContextAccessPolicy` with the manager, section editor and
-  administrator roles; the menu entry uses the same list.
+- One page (`reviewerdirectory`, through `LoadHandler`) with the operations `index`, `data`,
+  `export`, `roster` and `rosterExport`; `ContextAccessPolicy` with the manager, section editor and
+  administrator roles on every one of them.
+- Reviewers and the OJS numbers from `Repo::user()->getCollector()->filterByRoleIds([Reviewer])
+  ->includeReviewerData()`; interests from `preloadInterests()`; the journal's numbers from one
+  grouped query on its review assignments (cancelled ones left out); users made from their rows the
+  way core's `EntityDAO::fromRow()` does, with one query of settings for all of them. A few queries
+  in all, whatever the number of reviewers.
+- The page is a Vue component registered with `pkp.registry`, made of the core's own components
+  (table, form fields, search, pagination, buttons) and `useFiltersForm`, in the layout shared with
+  the Submission Queue Report.
+- MySQL/MariaDB and PostgreSQL. No core file is patched, no template is replaced, nothing is stored.
 
 ## Tests
 
-- **PHPUnit** (`tests/*Test.php`, on `PKP\tests\PKPTestCase`): the classes against the installed
-  PKP, the plugin found by PKP's plugin registry, the roles that may open the page, the roster
-  grouping (reviews, submissions, first and last dates), dates checked before they reach the
-  queries, the columns (personal data hidden by default), static assets, queries built on the
-  core collectors, the templates and the 38 translations. From the OJS root:
-
-  ```bash
-  lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/generic/reviewerDirectory/tests"
-  ```
-
+- **PHPUnit** (`tests/`): who may open the page and its data; the roster grouping; dates; the
+  columns (personal data hidden by default); the filters, the situations, the indices and the
+  sorting; CSV and XLSX; and, against the database, that the reviewers and their OJS numbers are the
+  core's and that the journal's numbers and the roster match independent counts. The translations.
 - **Cypress** (`cypress/tests/functional/ReviewerDirectory.cy.js`, run by
-  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on every push): enables the
-  plugin; an anonymous visitor ends at the login form; as an editor, the page loads its
-  stylesheet and script once, shows the menu shortcut, lists the reviewers, filters them by
-  name (and to none), hides and shows a column, builds the roster of a period and ignores an
-  impossible date. Each check fails with the part it covers removed.
-- Verified on OJS 3.5.0.3 and OMP 3.5.0.3, each with the whole suite.
+  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on OJS and OMP, MySQL and
+  PostgreSQL): the menu; the login form for a visitor; for every reviewer, the numbers of the
+  reviewer selection API; the situations adding up and a group listed; the roster with its text; the
+  CSV with the rows of the screen; and a reviewer getting nothing.
+- Checked in the browser on OJS and OMP 3.5: every reviewer against `api/v1/users/reviewers`,
+  filters, search, sorting, the roster, the exports, and the access of each role.
 
 Tests are kept in the repository and are not part of the release package.
 
+## Languages
+
+38 languages. The texts of the former release keep their translations; the new texts are reviewed in
+English, Portuguese (Brazil and Portugal) and Spanish, and are shown in English, marked *fuzzy*, in
+the other languages until a speaker reviews them.
+
 ## Credits & authorship
 
-- **Developed and maintained by** [OJSBR](https://ojsbr.com) — original plugin.
+- **Developed and maintained by** [OJSBR](https://ojsbr.com).
+- **[Public Knowledge Project](https://pkp.sfu.ca)** — the reviewer selection panel of OJS and OMP
+  and the core query behind its statistics, which the directory reuses; the core components of the
+  page.
+- **OJSBR's [Submission Queue Report](https://github.com/OJSBR/ojsbrSubmissionQueueReport)** — the
+  layout of the page (tiles, a summary that adds up, filters, export).
 - Distributed under the **GNU GPL v3**.
 
 ## AI use
 
-Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring
-it in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible
-for the published releases.
+Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring it
+in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible for
+the published releases.
 
 ## Contributing
 
-Issues and pull requests are welcome. Please target the branch matching the OJS version you
-are working against. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Issues and pull requests are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License
 
@@ -120,73 +144,100 @@ Distributed under the **GNU GPL v3**. See [`LICENSE`](LICENSE) and `docs/COPYING
 
 ## 🇧🇷 Português
 
-Plugin genérico para o **Open Journal Systems (OJS)** que adiciona um **diretório interno de
-avaliadores, restrito a editores** — puxando as contas que já têm o papel de *Avaliador* na
-revista ou na editora, com seus perfis e estatísticas de avaliação — além de uma **nominata de
-avaliadores** por período (e, no OJS, por edição), pronta para publicar como agradecimento.
+> **Feito sobre o trabalho de outros.** As estatísticas dos avaliadores são as que o OJS e o OMP
+> mostram ao editor na escolha do avaliador — o painel de seleção de avaliadores do
+> [Public Knowledge Project](https://pkp.sfu.ca), vindas da mesma consulta do núcleo
+> (`Repo::user()->getCollector()->includeReviewerData()`). A página é feita com os componentes da
+> própria PKP e segue o layout do
+> [Relatório de submissões](https://github.com/OJSBR/ojsbrSubmissionQueueReport) da OJSBR, o plugin
+> irmão. Veja [Créditos](#créditos-e-autoria).
 
-> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Veja a seção
-> [Créditos e autoria](#créditos-e-autoria) abaixo.
+Plugin genérico para o **Open Journal Systems (OJS)** e o **Open Monograph Press (OMP)** que dá aos
+editores um **diretório interno do quadro de avaliadores** — todas as contas com o papel de
+*Avaliador*, com perfil, índices, resumo da situação, filtros e exportação — e a **nominata** de um
+período ou edição, pronta para publicar como agradecimento.
+
+> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).**
 
 ### Compatibilidade e branches
 
 | Aplicação | Branch | Release do plugin |
 |-----------|--------|-------------------|
-| OJS 3.5.x e OMP 3.5.x | `stable-3_5_0` *(padrão)* | 5.0.0.0 |
+| OJS 3.5.x e OMP 3.5.x | `stable-3_5_0` *(padrão)* | 5.0.1.0 |
 
-> A partir da 1.0.2.0 o mesmo pacote serve OJS e OMP. O repositório `reviewerDirectoryOmp`
-> está arquivado; as releases dele continuam disponíveis lá. O filtro da nominata por edição
-> só aparece no OJS: uma editora não tem edições, e lá a nominata é filtrada por data.
+O primeiro número da versão indica a linha da aplicação (5 = 3.5). O mesmo pacote atende OJS e OMP;
+o filtro da nominata por edição aparece só no OJS (editora não tem edições).
 
-### O que faz
+### O que o editor ganha
 
-- **Diretório de avaliadores** — uma página de backend, restrita a **Gerentes, Editores de
-  seção e Administradores**, listando todos os usuários com papel de *Avaliador* na revista.
-- **Atalho de um clique no menu do painel** — quando ativado, o plugin acrescenta um item
-  **Diretório de Avaliadores** ao fim do menu lateral do painel editorial, para o editor abrir
-  a página direto, sem passar pela tela de plugins. Aparece apenas para os papéis que a própria
-  página autoriza (Gerentes, Editores de seção e Administradores).
-- **Perfil + dados de avaliação por avaliador** — nome, afiliação, país, interesses de
-  avaliação, ORCID (com selo de autenticação) e estatísticas: avaliações concluídas, em
-  andamento, recusadas, média de dias para concluir, nota de qualidade, data da última
-  designação e **data da última conclusão**.
-- **Avaliações ativas com IDs de submissão** — a coluna *Ativas* lista as submissões que cada
-  avaliador está avaliando no momento, cada uma com link direto para o fluxo editorial.
-- **Busca instantânea** por nome, afiliação, país, interesse, e-mail, usuário e IDs de
-  submissão ativa, além do filtro **"somente com ORCID"**.
-- **Colunas configuráveis** — uma barra de checkboxes liga/desliga colunas; a escolha é
-  lembrada por navegador. Afiliação, país, ORCID, usuário e e-mail ficam ocultos por padrão.
-- **Ordenação** por qualquer coluna (numérica ou texto).
-- **Exportar para Excel** — um clique exporta exatamente o que está filtrado/visível para um
-  CSV UTF-8 que o Excel abre nativamente.
-- **Nominata de avaliadores** — escolha um **período** (data de conclusão da avaliação) e/ou
-  uma **edição**, e obtenha os avaliadores que concluíram avaliações naquele escopo, com a
-  contagem e as submissões avaliadas — com exportação própria para Excel.
+**Diretório de Avaliadores** no menu lateral, para **gestores, editores de seção e administradores**:
+
+- **O quadro de avaliadores** — quadros com quantos avaliadores há em cada grupo: todos, *livres
+  agora* (sem avaliação em andamento), *avaliando agora*, *com avaliação atrasada*, *avaliaram nos
+  últimos 12 meses*, *nunca avaliaram para a revista*, *sem ORCID*. O clique lista o grupo.
+- **Índices dos avaliadores listados nesta revista** — aceite dos convites, pareceres no prazo,
+  média de dias do convite ao parecer, avaliações em andamento e avaliações nos últimos 12 meses.
+  Seguem os filtros, descrevendo o grupo que está na tela.
+- **Situação** — uma por avaliador, a primeira que servir: *em atraso*, *sobrecarregados* (3 ou mais
+  avaliações em andamento), *avaliando*, *livres e em atividade* (avaliaram nos últimos 12 meses),
+  *livres e parados*, *nunca avaliaram*. Uma barra colorida e a legenda mostram quantos há em cada
+  uma e **fecham com o total**; o clique lista só esses avaliadores.
+- **Filtros** — situação, país, interesse, ORCID (qualquer, com, sem, autenticado), mínimo de
+  avaliações concluídas para a revista, meses sem concluir avaliação, nota mínima e busca por nome,
+  e-mail, usuário, afiliação, país, interesse, ORCID ou número de submissão (`#123`). Tudo fica no
+  endereço da página: o diretório filtrado pode ser compartilhado como link.
+- **Tabela** — 50 por página, ordenável, com as colunas que cada editor escolhe (guardadas no
+  navegador): nome e e-mail, afiliação, país, ORCID (com marca de autenticado), usuário, interesses,
+  situação, avaliações em andamento com link para as submissões, atrasadas, concluídas, últimos 12
+  meses, convites, barras de aceite e de prazo, média de dias, última conclusão (em destaque depois
+  de 24 meses), os números que o OJS mostra na escolha do avaliador, nota e última designação. Dados
+  pessoais ficam ocultos até o editor mostrar.
+- **Exportação** — CSV para o Excel (UTF-8 com BOM, `;`) ou planilha do Excel (XLSX, cabeçalho
+  congelado com botões de filtro), com exatamente os avaliadores filtrados; a primeira linha diz a
+  revista, quando, quem gerou e com quais filtros.
+- **Nominata** — período de conclusão das avaliações e, no OJS, edição: quadros com avaliadores,
+  avaliações, submissões e países; a tabela; a exportação; e **a lista pronta para publicar**, um
+  avaliador por linha em ordem alfabética com afiliação e país, copiada com um clique.
+
+### Duas famílias de números
+
+- **Como o OJS/OMP mostra** na escolha do avaliador — concluídas, recusadas, média de dias, nota,
+  última designação — da mesma consulta do núcleo: são os números daquela tela. A menos que o
+  administrador do site tenha desligado o compartilhamento, somam todas as revistas do site.
+- **Só desta revista ou editora** — em andamento, atrasadas, concluídas, últimos 12 meses, convites,
+  aceite, no prazo, média de dias, última conclusão. Os quadros, os índices e as situações vêm daqui.
 
 ### Instalação
 
-Instale em **Configurações → Website → Plugins → Enviar um novo plugin**, ou extraia a pasta
-em `plugins/generic/` (ficando `plugins/generic/reviewerDirectory/`). Depois ative o
-**Reviewer Directory** na lista de plugins *Genéricos*. Acesse pela ação **"Abrir diretório"**
-na lista de plugins, ou em `/<revista>/reviewerdirectory`.
+Envie o pacote em **Configurações → Website → Plugins → Enviar um novo plugin**, ou extraia a pasta em
+`plugins/generic/` (ficando `plugins/generic/reviewerDirectory/`). Depois ative o **Diretório de
+Avaliadores** na lista de plugins *Genéricos*. Abre pelo menu lateral, pela ação *Abrir diretório* da
+lista de plugins ou em `/<revista>/reviewerdirectory`. Links para a página anterior continuam
+funcionando.
 
 ### Testes
 
-PHPUnit em `tests/` (sobre `PKP\tests\PKPTestCase`) e Cypress em `cypress/tests/functional/`
-(rodado pelo [pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push), com o
-comando da seção em inglês. A suíte cobre as classes contra o PKP instalado, o plugin encontrado
-pelo registro de plugins, os papéis que abrem a página, o agrupamento da nominata, datas validadas
-antes das consultas, as colunas (dados pessoais ocultos por padrão), CSS e JS em arquivo,
-consultas sobre os collectors do núcleo, os templates e as 38 traduções. O Cypress liga o plugin,
-confere que o visitante anônimo cai no login e, como editor, que a página carrega CSS e JS uma
-vez, mostra o atalho no menu, lista e filtra os avaliadores, oculta e mostra uma coluna, gera a
-nominata de um período e ignora uma data impossível. Verificado no OJS 3.5.0.3 e no OMP 3.5.0.3, com a suíte inteira em cada um.
+PHPUnit e Cypress no CI da PKP (OJS e OMP, MySQL e PostgreSQL): quem abre a página e os dados;
+agrupamento da nominata; datas; colunas (dados pessoais ocultos); filtros, situações, índices e
+ordenação; CSV e XLSX; e, contra o banco, avaliadores e números do OJS iguais aos do núcleo, números
+da revista e nominata iguais a contagens independentes; traduções. No navegador: para cada
+avaliador, os números da API de seleção de avaliadores; situações fechando; nominata com o texto;
+CSV com as linhas da tela; avaliador barrado. Conferido no OJS e no OMP 3.5.
 
-Os testes ficam no repositório e não fazem parte do pacote da release.
+### Idiomas
+
+38 idiomas. Os textos da versão anterior mantêm as traduções; os textos novos estão revisados em
+inglês, português (Brasil e Portugal) e espanhol, e aparecem em inglês, marcados como *fuzzy*, nos
+demais idiomas até um falante revisar.
 
 ### Créditos e autoria
 
-- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com) — plugin autoral.
+- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com).
+- **[Public Knowledge Project](https://pkp.sfu.ca)** — o painel de seleção de avaliadores do OJS e do
+  OMP e a consulta do núcleo por trás das estatísticas dele, que o diretório reaproveita; os
+  componentes do núcleo usados na página.
+- **O [Relatório de submissões](https://github.com/OJSBR/ojsbrSubmissionQueueReport) da OJSBR** — o
+  layout da página (quadros, resumo que fecha, filtros, exportação).
 - Distribuído sob a **GNU GPL v3**.
 
 ### Uso de IA

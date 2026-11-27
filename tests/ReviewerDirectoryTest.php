@@ -14,6 +14,8 @@
 
 namespace APP\plugins\generic\reviewerDirectory\tests;
 
+use APP\plugins\generic\reviewerDirectory\classes\DirectoryFilters;
+use APP\plugins\generic\reviewerDirectory\classes\Roster;
 use APP\plugins\generic\reviewerDirectory\ReviewerDirectoryHandler;
 use APP\plugins\generic\reviewerDirectory\ReviewerDirectoryPlugin;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -22,6 +24,7 @@ use PKP\tests\PKPTestCase;
 
 #[CoversClass(ReviewerDirectoryPlugin::class)]
 #[CoversClass(ReviewerDirectoryHandler::class)]
+#[CoversClass(Roster::class)]
 class ReviewerDirectoryTest extends PKPTestCase
 {
     public function testOnlyManagersSectionEditorsAndAdministratorsOpenThePage(): void
@@ -31,7 +34,7 @@ class ReviewerDirectoryTest extends PKPTestCase
         $handler = new ReviewerDirectoryHandler(new ReviewerDirectoryPlugin());
         $assigned = $handler->getRoleAssignments();
         ksort($assigned);
-        $expected = array_fill_keys(ReviewerDirectoryPlugin::ALLOWED_ROLES, ['index']);
+        $expected = array_fill_keys(ReviewerDirectoryPlugin::ALLOWED_ROLES, ['index', 'data', 'export', 'roster', 'rosterExport']);
         ksort($expected);
         $this->assertSame($expected, $assigned);
         $this->assertArrayNotHasKey(Role::ROLE_ID_REVIEWER, $assigned);
@@ -51,8 +54,8 @@ class ReviewerDirectoryTest extends PKPTestCase
         $this->assertSame([
             7 => ['count' => 3, 'submissions' => [12, 30], 'firstDate' => '2026-01-05', 'lastDate' => '2026-05-20'],
             9 => ['count' => 1, 'submissions' => [12], 'firstDate' => '2026-02-01', 'lastDate' => '2026-02-01'],
-        ], ReviewerDirectoryHandler::groupCompletedReviews($rows));
-        $this->assertSame([], ReviewerDirectoryHandler::groupCompletedReviews([]));
+        ], Roster::groupCompletedReviews($rows));
+        $this->assertSame([], Roster::groupCompletedReviews([]));
     }
 
     public function testOnlyRealDatesReachTheQueries(): void
@@ -67,18 +70,16 @@ class ReviewerDirectoryTest extends PKPTestCase
     public function testEveryColumnHasALabelAndAKnownSort(): void
     {
         $handler = new ReviewerDirectoryHandler(new ReviewerDirectoryPlugin());
-        $columns = $handler->getColumns();
-        $this->assertSame(
-            ['affiliation', 'country', 'orcid', 'username', 'email', 'interests', 'completed', 'active', 'declined', 'average', 'rating', 'lastAssigned', 'lastCompleted'],
-            array_column($columns, 'key')
-        );
-        foreach ($columns as $column) {
-            $this->assertContains($column['sort'], ['text', 'num']);
-            $this->assertIsBool($column['default']);
+        foreach (ReviewerDirectoryHandler::COLUMNS as $id => $column) {
+            $this->assertNotSame('', $handler->getColumnLabel($id));
+            $this->assertIsBool($column['visible']);
+            if ($column['sort'] !== null) {
+                $this->assertContains($column['sort'], DirectoryFilters::ORDER_BY, $id);
+            }
         }
         // Personal data is hidden until the editor shows it.
-        foreach (['email', 'username', 'orcid'] as $key) {
-            $this->assertFalse($columns[array_search($key, array_column($columns, 'key'))]['default'], "{$key} is shown by default.");
+        foreach (['email', 'username', 'orcid'] as $id) {
+            $this->assertFalse(ReviewerDirectoryHandler::COLUMNS[$id]['visible'], "{$id} is shown by default.");
         }
     }
 
@@ -93,11 +94,15 @@ class ReviewerDirectoryTest extends PKPTestCase
         $this->assertStringNotContainsString('style=', (string) file_get_contents($root . '/templates/directory.tpl'));
     }
 
-    public function testTheQueriesStartFromTheCoreCollectors(): void
+    public function testTheReviewersComeFromTheCoreCollector(): void
     {
-        $handler = (string) file_get_contents(dirname(__DIR__) . '/ReviewerDirectoryHandler.php');
-        $this->assertStringNotContainsString("DB::table(", $handler);
-        $this->assertStringContainsString('Repo::reviewAssignment()->getCollector()', $handler);
-        $this->assertStringContainsString('->filterByContextIds([$contextId])', $handler);
+        $root = dirname(__DIR__);
+        $handler = (string) file_get_contents($root . '/ReviewerDirectoryHandler.php');
+        $this->assertStringNotContainsString('DB::table(', $handler);
+        $stats = (string) file_get_contents($root . '/classes/ReviewerStats.php');
+        // The numbers OJS shows when choosing a reviewer come from the same core query.
+        $this->assertStringContainsString('Repo::user()->getCollector()', $stats);
+        $this->assertStringContainsString('->includeReviewerData()', $stats);
+        $this->assertStringContainsString('->filterByRoleIds([Role::ROLE_ID_REVIEWER])', $stats);
     }
 }

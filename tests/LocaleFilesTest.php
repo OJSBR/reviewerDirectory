@@ -27,14 +27,18 @@ class LocaleFilesTest extends PKPTestCase
     ];
 
     /** Locales reviewed by a fluent speaker; every entry of the others is marked fuzzy. */
-    public const REVIEWED = ['en', 'pt', 'pt_BR', 'es', 'ca', 'gl', 'fr', 'fr_CA', 'it', 'de', 'nl'];
+    /** Locales reviewed in full by a fluent speaker: no entry may be fuzzy. */
+    public const REVIEWED = ['en', 'pt', 'pt_BR', 'es'];
 
     public const MASTER = 'en';
 
-    /** Placeholders each key must keep, exactly once. */
-    public const PLACEHOLDERS = [
-        'plugins.generic.reviewerDirectory.nominataSummary' => ['{$n}', '{$reviews}'],
+    /** Keys translated before 5.0.1.0, reviewed then: a text equal to the English one is a real translation. */
+    public const EARLIER_KEYS = [
+        'displayName', 'description', 'openDirectory', 'searchPlaceholder', 'rating', 'lastAssigned', 'lastCompleted',
+        'orcidVerified', 'columns', 'export', 'tabDirectory', 'tabNominata', 'nominataIntro', 'dateFrom', 'dateTo',
+        'issue', 'allIssues', 'generate', 'nominataEmpty', 'reviewsInScope', 'submissions', 'firstDate', 'lastDate',
     ];
+
 
     protected function localeDir(): string
     {
@@ -70,7 +74,7 @@ class LocaleFilesTest extends PKPTestCase
     {
         $files = $this->files();
         $master = array_keys($files[self::MASTER]->entries);
-        $this->assertCount(37, $master);
+        $this->assertGreaterThan(100, count($master));
 
         foreach ($files as $locale => $file) {
             $this->assertSame($master, array_keys($file->entries), "Keys of {$locale} differ from " . self::MASTER . '.');
@@ -92,6 +96,34 @@ class LocaleFilesTest extends PKPTestCase
                 continue;
             }
             $this->assertTrue(in_array($key, $keys, true) || $this->isKeyPrefix($key, $keys), "{$key} is used but not translated.");
+        }
+
+        $p = 'plugins.generic.reviewerDirectory.';
+        foreach (\APP\plugins\generic\reviewerDirectory\classes\ReviewerStats::SITUATIONS as $id) {
+            $this->assertContains($p . 'situation.' . $id, $keys);
+            $this->assertContains($p . 'situation.' . $id . '.description', $keys);
+        }
+        foreach (\APP\plugins\generic\reviewerDirectory\classes\DirectoryFilters::GROUPS as $id) {
+            $this->assertContains($p . 'group.' . $id, $keys);
+            $this->assertContains($p . 'group.' . $id . '.description', $keys);
+        }
+        foreach (\APP\plugins\generic\reviewerDirectory\classes\DirectoryFilters::ORCID as $id) {
+            $this->assertContains($p . 'filter.orcid.' . $id, $keys);
+        }
+        $handler = (string) file_get_contents($root . '/ReviewerDirectoryHandler.php');
+        $this->assertSame(1, preg_match('/\$own = \[(.*?)\];/s', $handler, $own));
+        preg_match_all("/'([a-zA-Z.]+)'/", $own[1], $names);
+        foreach ($names[1] as $name) {
+            $this->assertContains($p . $name, $keys);
+        }
+        // Every text the page reads is sent by the handler.
+        preg_match_all("/'([a-zA-Z.]+)' => '([a-zA-Z]+)'/", $handler, $renamed);
+        preg_match_all("/'([a-zA-Z]+)' => __\\('/", $handler, $core);
+        $sent = array_merge($names[1], $renamed[1], $core[1]);
+        $script = (string) file_get_contents($root . '/js/reviewerDirectory.js');
+        preg_match_all("/\\bt\\.([a-zA-Z]+)\\b|\\bt\\[\\\\'([a-zA-Z.]+)\\\\'\\]/", $script, $used);
+        foreach (array_unique(array_filter(array_merge($used[1], $used[2]))) as $name) {
+            $this->assertContains($name, $sent, "The page uses t.{$name}, which the handler does not send.");
         }
     }
 
@@ -130,27 +162,36 @@ class LocaleFilesTest extends PKPTestCase
         }
     }
 
-    public function testUnreviewedLocalesAreFuzzyAndReviewedOnesAreNot(): void
+    public function testUnreviewedTextIsMarkedFuzzy(): void
     {
-        foreach ($this->files() as $locale => $file) {
-            $reviewed = in_array($locale, self::REVIEWED, true);
+        $files = $this->files();
+        $master = $files[self::MASTER]->entries;
+        foreach ($files as $locale => $file) {
             foreach ($file->entries as $key => $value) {
-                $this->assertSame(!$reviewed, $file->fuzzy[$key] ?? false, ($reviewed ? 'Fuzzy' : 'Not fuzzy') . " entry {$key} in {$locale}.");
+                if (in_array($locale, self::REVIEWED, true)) {
+                    $this->assertFalse($file->fuzzy[$key] ?? false, "Fuzzy entry {$key} in {$locale}, reviewed in full.");
+                } elseif ($value === $master[$key] && !in_array(substr($key, strlen('plugins.generic.reviewerDirectory.')), self::EARLIER_KEYS, true) && !preg_match('/^[\\d\\W]*$|^(CSV|Total|ORCID)/u', $value)) {
+                    // Text still in English in another language waits for a speaker, flagged.
+                    $this->assertTrue($file->fuzzy[$key] ?? false, "Untranslated entry {$key} in {$locale} is not marked fuzzy.");
+                }
             }
         }
     }
 
-    public function testPlaceholdersAreKept(): void
+    public function testPlaceholdersAreTheSameInEveryLocale(): void
     {
-        foreach ($this->files() as $locale => $file) {
-            foreach ($file->entries as $key => $value) {
-                $expected = self::PLACEHOLDERS[$key] ?? [];
-                preg_match_all('/\{\$[a-zA-Z0-9_]+\}/', $value, $m);
-                $found = array_values(array_unique($m[0]));
-                sort($found);
-                $this->assertSame($expected, $found, "Placeholders of {$key} in {$locale}.");
+        $files = $this->files();
+        $placeholders = function (string $value): array {
+            preg_match_all('/\{\$[a-zA-Z0-9_]+\}/', $value, $m);
+            $found = array_values(array_unique($m[0]));
+            sort($found);
+            return $found;
+        };
+        foreach ($files[self::MASTER]->entries as $key => $master) {
+            foreach ($files as $locale => $file) {
+                $this->assertSame($placeholders($master), $placeholders($file->entries[$key]), "Placeholders of {$key} in {$locale}.");
                 // "count" is reserved by the translator (plural rules).
-                $this->assertStringNotContainsString('{$count}', $value, "{$key} uses the reserved {\$count} in {$locale}.");
+                $this->assertStringNotContainsString('{$count}', $file->entries[$key], "{$key} uses the reserved {\$count} in {$locale}.");
             }
         }
     }

@@ -22,47 +22,8 @@ msgstr "Abrir directorio"
 msgid "plugins.generic.reviewerDirectory.searchPlaceholder"
 msgstr "Buscar por nombre, afiliación, país, interés, correo electrónico..."
 
-msgid "plugins.generic.reviewerDirectory.onlyOrcid"
-msgstr "Solo con ORCID"
-
-msgid "plugins.generic.reviewerDirectory.showing"
-msgstr "Mostrando"
-
-msgid "plugins.generic.reviewerDirectory.of"
-msgstr "de"
-
-msgid "plugins.generic.reviewerDirectory.noReviewers"
-msgstr "No hay revisores registrados en esta revista."
-
-msgid "plugins.generic.reviewerDirectory.reviewsCompleted"
-msgstr "Revisiones completadas"
-
-msgid "plugins.generic.reviewerDirectory.reviewsActive"
-msgstr "Revisiones en curso"
-
-msgid "plugins.generic.reviewerDirectory.reviewsDeclined"
-msgstr "Revisiones rechazadas"
-
-msgid "plugins.generic.reviewerDirectory.averageDays"
-msgstr "Promedio de días para completar"
-
 msgid "plugins.generic.reviewerDirectory.rating"
 msgstr "Calificación de calidad (1 a 5)"
-
-msgid "plugins.generic.reviewerDirectory.completedShort"
-msgstr "Compl."
-
-msgid "plugins.generic.reviewerDirectory.activeShort"
-msgstr "Activas"
-
-msgid "plugins.generic.reviewerDirectory.declinedShort"
-msgstr "Rech."
-
-msgid "plugins.generic.reviewerDirectory.averageShort"
-msgstr "Prom. (d)"
-
-msgid "plugins.generic.reviewerDirectory.ratingShort"
-msgstr "Calif."
 
 msgid "plugins.generic.reviewerDirectory.lastAssigned"
 msgstr "Última asignación"
@@ -106,9 +67,6 @@ msgstr "Generar nómina"
 msgid "plugins.generic.reviewerDirectory.nominataEmpty"
 msgstr "Ningún revisor completó revisiones dentro del ámbito seleccionado."
 
-msgid "plugins.generic.reviewerDirectory.nominataSummary"
-msgstr "{$n} revisor(es) completaron {$reviews} revisión(es) dentro del ámbito seleccionado."
-
 msgid "plugins.generic.reviewerDirectory.reviewsInScope"
 msgstr "Revisiones completadas en el ámbito"
 
@@ -120,3 +78,330 @@ msgstr "Primera"
 
 msgid "plugins.generic.reviewerDirectory.lastDate"
 msgstr "Última"
+
+msgid "plugins.generic.reviewerDirectory.situation.overdue"
+msgstr "Con retraso"
+
+msgid "plugins.generic.reviewerDirectory.situation.overdue.description"
+msgstr "Tiene una revisión con respuesta o informe fuera de plazo."
+
+msgid "plugins.generic.reviewerDirectory.situation.busy"
+msgstr "Saturados"
+
+msgid "plugins.generic.reviewerDirectory.situation.busy.description"
+msgstr "Tres o más revisiones en curso, ninguna con retraso."
+
+msgid "plugins.generic.reviewerDirectory.situation.reviewing"
+msgstr "Revisando"
+
+msgid "plugins.generic.reviewerDirectory.situation.reviewing.description"
+msgstr "Una o dos revisiones en curso, ninguna con retraso."
+
+msgid "plugins.generic.reviewerDirectory.situation.recent"
+msgstr "Disponibles, activos"
+
+msgid "plugins.generic.reviewerDirectory.situation.recent.description"
+msgstr "Sin revisiones en curso; completó una revisión para la revista en los últimos 12 meses."
+
+msgid "plugins.generic.reviewerDirectory.situation.idle"
+msgstr "Disponibles, inactivos"
+
+msgid "plugins.generic.reviewerDirectory.situation.idle.description"
+msgstr "Sin revisiones en curso; su última revisión para la revista tiene más de 12 meses."
+
+msgid "plugins.generic.reviewerDirectory.situation.new"
+msgstr "Nunca revisaron"
+
+msgid "plugins.generic.reviewerDirectory.situation.new.description"
+msgstr "Nunca completaron una revisión para la revista y no tienen ninguna en curso."
+
+msgid "plugins.generic.reviewerDirectory.group.available"
+msgstr "Disponibles ahora"
+
+msgid "plugins.generic.reviewerDirectory.group.available.description"
+msgstr "Ninguna revisión en curso en la revista."
+
+msgid "plugins.generic.reviewerDirectory.group.reviewing"
+msgstr "Revisando ahora"
+
+msgid "plugins.generic.reviewerDirectory.group.reviewing.description"
+msgstr "Al menos una revisión en curso en la revista."
+
+msgid "plugins.generic.reviewerDirectory.group.overdue"
+msgstr "Con revisiones vencidas"
+
+msgid "plugins.generic.reviewerDirectory.group.overdue.description"
+msgstr "Respuesta o informe fuera de plazo."
+
+msgid "plugins.generic.reviewerDirectory.group.recent"
+msgstr "Revisaron en los últimos 12 meses"
+
+msgid "plugins.generic.reviewerDirectory.group.recent.description"
+msgstr "Completaron al menos una revisión para la revista en los últimos 12 meses."
+
+msgid "plugins.generic.reviewerDirectory.group.never"
+msgstr "Nunca revisaron para la revista"
+
+msgid "plugins.generic.reviewerDirectory.group.never.description"
+msgstr "Ninguna revisión completada para la revista hasta ahora."
+
+msgid "plugins.generic.reviewerDirectory.group.withoutOrcid"
+msgstr "Sin ORCID"
+
+msgid "plugins.generic.reviewerDirectory.group.withoutOrcid.description"
+msgstr "Sin ORCID iD en el perfil."
+
+msgid "plugins.generic.reviewerDirectory.column.situation"
+msgstr "Situación"
+
+msgid "plugins.generic.reviewerDirectory.column.active"
+msgstr "En curso"
+
+msgid "plugins.generic.reviewerDirectory.column.active.description"
+msgstr "Revisiones en curso en la revista (solicitadas y aún no completadas, rechazadas ni canceladas), con sus envíos."
+
+msgid "plugins.generic.reviewerDirectory.column.overdue"
+msgstr "Vencidas"
+
+msgid "plugins.generic.reviewerDirectory.column.overdue.description"
+msgstr "Revisiones en curso con la respuesta o el informe fuera de plazo."
+
+msgid "plugins.generic.reviewerDirectory.column.completed"
+msgstr "Completadas"
+
+msgid "plugins.generic.reviewerDirectory.column.completed.description"
+msgstr "Revisiones completadas para esta revista."
+
+msgid "plugins.generic.reviewerDirectory.column.recent"
+msgstr "Últimos 12 meses"
+
+msgid "plugins.generic.reviewerDirectory.column.recent.description"
+msgstr "Revisiones completadas para esta revista en los últimos 12 meses."
+
+msgid "plugins.generic.reviewerDirectory.column.requests"
+msgstr "Invitaciones"
+
+msgid "plugins.generic.reviewerDirectory.column.requests.description"
+msgstr "Invitaciones a revisar recibidas de esta revista, sin contar las canceladas."
+
+msgid "plugins.generic.reviewerDirectory.column.acceptance"
+msgstr "Aceptación"
+
+msgid "plugins.generic.reviewerDirectory.column.acceptance.description"
+msgstr "Invitaciones aceptadas entre las respondidas, en esta revista."
+
+msgid "plugins.generic.reviewerDirectory.column.onTime"
+msgstr "A tiempo"
+
+msgid "plugins.generic.reviewerDirectory.column.onTime.description"
+msgstr "Informes entregados dentro del plazo, entre las revisiones completadas para esta revista."
+
+msgid "plugins.generic.reviewerDirectory.column.averageDays"
+msgstr "Promedio de días"
+
+msgid "plugins.generic.reviewerDirectory.column.averageDays.description"
+msgstr "Promedio de días entre la invitación y el informe, en esta revista."
+
+msgid "plugins.generic.reviewerDirectory.column.lastCompleted.description"
+msgstr "Última revisión completada para esta revista."
+
+msgid "plugins.generic.reviewerDirectory.column.ojs"
+msgstr "En OJS: completadas · rechazadas · promedio"
+
+msgid "plugins.generic.reviewerDirectory.column.ojs.description"
+msgstr "Los números que OJS muestra al editor al elegir un revisor. Salvo que el administrador del sitio haya desactivado el uso compartido, suman todas las revistas del sitio."
+
+msgid "plugins.generic.reviewerDirectory.column.rating.description"
+msgstr "Promedio de las calificaciones que los editores dieron a los informes del revisor, como lo muestra OJS."
+
+msgid "plugins.generic.reviewerDirectory.column.lastAssigned.description"
+msgstr "Última invitación a revisar, como la muestra OJS."
+
+msgid "plugins.generic.reviewerDirectory.column.activeSubmissions"
+msgstr "Envíos en revisión"
+
+msgid "plugins.generic.reviewerDirectory.column.ojsCompleted"
+msgstr "Completadas (OJS)"
+
+msgid "plugins.generic.reviewerDirectory.column.ojsDeclined"
+msgstr "Rechazadas (OJS)"
+
+msgid "plugins.generic.reviewerDirectory.column.ojsAverageDays"
+msgstr "Promedio de días (OJS)"
+
+msgid "plugins.generic.reviewerDirectory.filter.interest.description"
+msgstr "Revisores con algún interés que contenga este texto."
+
+msgid "plugins.generic.reviewerDirectory.filter.orcid.any"
+msgstr "Cualquiera"
+
+msgid "plugins.generic.reviewerDirectory.filter.orcid.with"
+msgstr "Con ORCID"
+
+msgid "plugins.generic.reviewerDirectory.filter.orcid.without"
+msgstr "Sin ORCID"
+
+msgid "plugins.generic.reviewerDirectory.filter.orcid.verified"
+msgstr "ORCID verificado"
+
+msgid "plugins.generic.reviewerDirectory.filter.minCompleted"
+msgstr "Mínimo de revisiones completadas para la revista"
+
+msgid "plugins.generic.reviewerDirectory.filter.monthsIdle"
+msgstr "Meses sin completar una revisión"
+
+msgid "plugins.generic.reviewerDirectory.filter.monthsIdle.description"
+msgstr "Revisores cuya última revisión para la revista tiene al menos esa antigüedad, o que nunca completaron una."
+
+msgid "plugins.generic.reviewerDirectory.export.csv"
+msgstr "CSV (Excel, LibreOffice)"
+
+msgid "plugins.generic.reviewerDirectory.export.xlsx"
+msgstr "Libro de Excel (XLSX)"
+
+msgid "plugins.generic.reviewerDirectory.export.filePrefix"
+msgstr "revisores"
+
+msgid "plugins.generic.reviewerDirectory.export.rosterFilePrefix"
+msgstr "nomina de revisores"
+
+msgid "plugins.generic.reviewerDirectory.export.firstLine"
+msgstr "{$context} — generado el {$date} por {$user} — {$filters}"
+
+msgid "plugins.generic.reviewerDirectory.rosterPeriod"
+msgstr "Revisiones completadas entre {$from} y {$to}"
+
+msgid "plugins.generic.reviewerDirectory.issue.description"
+msgstr "Solo las revisiones de los artículos de este número."
+
+msgid "plugins.generic.reviewerDirectory.allReviewers"
+msgstr "Todos los revisores"
+
+msgid "plugins.generic.reviewerDirectory.totalCount"
+msgstr "Total: {$n}"
+
+msgid "plugins.generic.reviewerDirectory.generatedAt"
+msgstr "Generado el {$date}"
+
+msgid "plugins.generic.reviewerDirectory.exportTitle"
+msgstr "Exportar lo filtrado"
+
+msgid "plugins.generic.reviewerDirectory.exportFormat"
+msgstr "Formato"
+
+msgid "plugins.generic.reviewerDirectory.download"
+msgstr "Descargar"
+
+msgid "plugins.generic.reviewerDirectory.indicesHeading"
+msgstr "El equipo de revisores"
+
+msgid "plugins.generic.reviewerDirectory.indicesNote"
+msgstr "Todas las personas con el rol de Revisor en la revista. Elija un grupo para listar sus revisores."
+
+msgid "plugins.generic.reviewerDirectory.indicesFiltered"
+msgstr "Con los filtros activos."
+
+msgid "plugins.generic.reviewerDirectory.ratesHeading"
+msgstr "Índices de los revisores listados en esta revista"
+
+msgid "plugins.generic.reviewerDirectory.rate.acceptance"
+msgstr "Aceptación de invitaciones"
+
+msgid "plugins.generic.reviewerDirectory.rate.acceptance.description"
+msgstr "Invitaciones aceptadas entre las respondidas."
+
+msgid "plugins.generic.reviewerDirectory.rate.onTime"
+msgstr "Informes a tiempo"
+
+msgid "plugins.generic.reviewerDirectory.rate.onTime.description"
+msgstr "Informes entregados dentro del plazo, entre todos los completados."
+
+msgid "plugins.generic.reviewerDirectory.rate.averageDays"
+msgstr "De la invitación al informe"
+
+msgid "plugins.generic.reviewerDirectory.rate.averageDays.description"
+msgstr "Promedio de días entre la invitación y el informe, en todas las revisiones completadas."
+
+msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress"
+msgstr "Revisiones en curso"
+
+msgid "plugins.generic.reviewerDirectory.rate.reviewsInProgress.description"
+msgstr "Envíos en revisión con los revisores listados ahora."
+
+msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent"
+msgstr "Revisiones en los últimos 12 meses"
+
+msgid "plugins.generic.reviewerDirectory.rate.reviewsRecent.description"
+msgstr "Revisiones que los revisores listados completaron para la revista en los últimos 12 meses."
+
+msgid "plugins.generic.reviewerDirectory.summaryHeading"
+msgstr "Situación"
+
+msgid "plugins.generic.reviewerDirectory.summaryDescription"
+msgstr "Una situación por revisor, la primera que corresponda en este orden, para que los números sumen. Elija una o más para listar solo esos revisores."
+
+msgid "plugins.generic.reviewerDirectory.summaryClear"
+msgstr "Mostrar todas las situaciones"
+
+msgid "plugins.generic.reviewerDirectory.filtersShow"
+msgstr "Mostrar filtros"
+
+msgid "plugins.generic.reviewerDirectory.filtersHide"
+msgstr "Ocultar filtros"
+
+msgid "plugins.generic.reviewerDirectory.activeFilters"
+msgstr "Filtros activos"
+
+msgid "plugins.generic.reviewerDirectory.columnsReset"
+msgstr "Columnas predeterminadas"
+
+msgid "plugins.generic.reviewerDirectory.loadError"
+msgstr "No se pudo cargar el directorio."
+
+msgid "plugins.generic.reviewerDirectory.retry"
+msgstr "Intentar de nuevo"
+
+msgid "plugins.generic.reviewerDirectory.pageOf"
+msgstr "Página {$page} de {$lastPage}"
+
+msgid "plugins.generic.reviewerDirectory.percent"
+msgstr "{$percent}%"
+
+msgid "plugins.generic.reviewerDirectory.days"
+msgstr "{$days} días"
+
+msgid "plugins.generic.reviewerDirectory.monthsAgo"
+msgstr "hace {$months} meses"
+
+msgid "plugins.generic.reviewerDirectory.thisMonth"
+msgstr "este mes"
+
+msgid "plugins.generic.reviewerDirectory.none"
+msgstr "Ninguna"
+
+msgid "plugins.generic.reviewerDirectory.openSubmission"
+msgstr "Abrir el envío {$id} en una pestaña nueva"
+
+msgid "plugins.generic.reviewerDirectory.mailto"
+msgstr "Escribir a {$name}"
+
+msgid "plugins.generic.reviewerDirectory.ojsNote"
+msgstr "Como lo muestra OJS al elegir un revisor: completadas · rechazadas · promedio de días"
+
+msgid "plugins.generic.reviewerDirectory.ratingOf"
+msgstr "Calificación {$rating} de 5"
+
+msgid "plugins.generic.reviewerDirectory.roster.reviewers"
+msgstr "Revisores"
+
+msgid "plugins.generic.reviewerDirectory.roster.countries"
+msgstr "Países"
+
+msgid "plugins.generic.reviewerDirectory.roster.copy"
+msgstr "Copiar la lista para publicar"
+
+msgid "plugins.generic.reviewerDirectory.roster.copied"
+msgstr "Copiado."
+
+msgid "plugins.generic.reviewerDirectory.roster.copyDescription"
+msgstr "Un revisor por línea, en orden alfabético, con afiliación y país: listo para pegar en la página de agradecimiento o en el número."

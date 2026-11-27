@@ -8,8 +8,15 @@
  *
  * @class ReviewerDirectoryPlugin
  *
- * @brief Internal reviewer directory: a backend page, restricted to managers and
- *  editors, that lists and filters the users with the Reviewer role in the journal.
+ * @brief Internal reviewer directory: a backend page, restricted to managers, section
+ *  editors and administrators, with the users who hold the Reviewer role in the journal
+ *  or press, indices of the reviewer pool, a summary of their situation, filters, an
+ *  export, and the reviewer roster (nominata) of a period or issue.
+ *
+ *  The numbers OJS/OMP shows when an editor chooses a reviewer (completed, declined,
+ *  average days, rating, last assignment) come from the same core query that screen uses;
+ *  the page is made of the core's own components, in the layout of OJSBR's Submission
+ *  Queue Report.
  */
 
 namespace APP\plugins\generic\reviewerDirectory;
@@ -55,6 +62,9 @@ class ReviewerDirectoryPlugin extends GenericPlugin
     public function register($category, $path, $mainContextId = null)
     {
         $success = parent::register($category, $path, $mainContextId);
+        if (Application::isUnderMaintenance()) {
+            return $success;
+        }
         if ($success && $this->getEnabled($mainContextId)) {
             Hook::add('LoadHandler', $this->callbackLoadHandler(...));
             Hook::add('TemplateManager::setupBackendPage', $this->callbackSetupBackendPage(...));
@@ -134,9 +144,9 @@ class ReviewerDirectoryPlugin extends GenericPlugin
     /**
      * The URL of the directory in the current journal.
      */
-    public function getDirectoryUrl($request): string
+    public function getDirectoryUrl($request, string $op = 'index'): string
     {
-        return $request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, self::PAGE, 'index');
+        return $request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, self::PAGE, $op);
     }
 
     /**
