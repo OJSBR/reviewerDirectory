@@ -5,3 +5,4 @@ cypress export-ignore
 tests export-ignore
 error_log export-ignore
 tools export-ignore
+docs/*.png export-ignore

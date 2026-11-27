@@ -2,10 +2,10 @@
 
 [![OJS](https://img.shields.io/badge/OJS-3.5-brightgreen)](https://pkp.sfu.ca/ojs/)
 [![OMP](https://img.shields.io/badge/OMP-3.5-brightgreen)](https://pkp.sfu.ca/omp/)
-[![Version](https://img.shields.io/badge/version-5.0.1.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-5.0.1.1-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/5.0.1.0/reviewerDirectory-5.0.1.0.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS / OMP 3.5](https://github.com/OJSBR/reviewerDirectory/releases/download/5.0.1.1/reviewerDirectory-5.0.1.1.tar.gz) — or browse all [Releases](../../releases).
 
 > **Built on the work of others.** The reviewer statistics are the ones OJS and OMP show when an
 > editor chooses a reviewer — the reviewer selection panel of the
@@ -26,12 +26,15 @@ with profile, indices, a summary of their situation, filters and an export — p
 
 | Application | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 5.0.1.0 |
+| OJS 3.5.x and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 5.0.1.1 |
 
 The first number of the version names the application line (5 = 3.5). The same package serves
 OJS and OMP; the roster filter by issue is shown only in OJS (a press has no issues).
 
 ## What the editor gets
+
+![The directory: the reviewer pool, the indices, the situations and the table of reviewers](docs/directory-en.png)
+<sub>Fictitious data, on the test installation of OJSBR.</sub>
 
 **Reviewer Directory** in the side menu, for **managers, section editors and administrators**:
 
@@ -61,6 +64,8 @@ OJS and OMP; the roster filter by issue is shown only in OJS (a press has no iss
 - **Roster (nominata)** — a period of review completion and, in OJS, an issue: tiles with reviewers,
   reviews, submissions and countries; the table; the export; and **the list ready to publish**, one
   reviewer per line in alphabetical order with affiliation and country, copied with one click.
+
+![The roster: period and issue, totals and the reviewers who completed reviews](docs/roster-en.png)
 
 ### Two families of numbers
 
@@ -168,12 +173,15 @@ período ou edição, pronta para publicar como agradecimento.
 
 | Aplicação | Branch | Release do plugin |
 |-----------|--------|-------------------|
-| OJS 3.5.x e OMP 3.5.x | `stable-3_5_0` *(padrão)* | 5.0.1.0 |
+| OJS 3.5.x e OMP 3.5.x | `stable-3_5_0` *(padrão)* | 5.0.1.1 |
 
 O primeiro número da versão indica a linha da aplicação (5 = 3.5). O mesmo pacote atende OJS e OMP;
 o filtro da nominata por edição aparece só no OJS (editora não tem edições).
 
 ### O que o editor ganha
+
+![O diretório: quadro de avaliadores, índices, situações e a tabela](docs/directory-pt_BR.png)
+<sub>Dados fictícios, na instalação de teste da OJSBR.</sub>
 
 **Diretório de Avaliadores** no menu lateral, para **gestores, editores de seção e administradores**:
 
@@ -203,6 +211,8 @@ o filtro da nominata por edição aparece só no OJS (editora não tem edições
 - **Nominata** — período de conclusão das avaliações e, no OJS, edição: quadros com avaliadores,
   avaliações, submissões e países; a tabela; a exportação; e **a lista pronta para publicar**, um
   avaliador por linha em ordem alfabética com afiliação e país, copiada com um clique.
+
+![A nominata: período e edição, totais e os avaliadores que concluíram avaliações](docs/roster-pt_BR.png)
 
 ### Duas famílias de números
 
